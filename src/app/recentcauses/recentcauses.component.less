@@ -1,0 +1,26 @@
+@import 'variables.less';
+
+.recent-causes-progressbar {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  margin: 10px auto;
+  overflow: hidden;
+
+  position: relative;
+
+  &-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top right, rgba(@orange, .4), rgba(white, .2));
+    transform: translateY(-100%);
+  }
+}

@@ -3,9 +3,9 @@
                 <div class="row">
                     <div class="col-md-9">
                         <nav class="menuzord menuzord-responsive">
-                          <a (click)="openMenu()" class="showhide menu-toggle-bar"><span></span></a>
+                          <a (click)="changeMenuState()" class="showhide menu-toggle-bar"><span></span></a>
 
-                           <ul class="menuzord-menu">
+                           <ul *ngIf="menuOpen" [@changeMenuState]="'menuOpened'" class="menuzord-menu">
                                <li><a href="index.html" class="active">Home</a></li>
                                <li><a href="about.html">ABOUT</a></li>
                                <li><a href="causes.html">CAUSES</a>
