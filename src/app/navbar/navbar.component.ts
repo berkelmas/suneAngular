@@ -21,9 +21,13 @@ import {
   styleUrls: ['./navbar.component.less'],
   animations: [
     trigger('changeMenuState', [
-      state('menuOpened', style({opacity: 1})),
-      state('void', style({opacity: 0, transform: 'translatex(-300px)'})),
-      transition('void <=> menuOpened', animate('.5s'))
+      transition('void => menuOpened', [
+        style({height: 0, opacity : 0}),
+        animate('500ms ease-in')
+      ]),
+      transition('menuOpened => void', [
+        animate('500ms ease-in', style({height: 0, opacity : 0}))
+      ])
     ])
   ]
 })
