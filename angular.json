@@ -28,8 +28,25 @@
               "src/assets"
             ],
             "styles": [
+              "css/font-awesome.min.css",
+              "css/ionicons.min.css",
+              "css/bootstrap.min.css",
+              "css/bootstrap-datetimepicker.css",
+              "css/bootstrap-datetimepicker-standalone.css",
+              "css/roundslider.css",
+              "css/magnific-popup.css",
+              "css/jquery.countdown.css",
+              "css/menuzord.css",
+              "css/menuzord-animations.css",
+              "css/owl.carousel.min.css",
+              "css/owl.theme.min.css",
               "src/styles.less"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "less"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -88,6 +105,19 @@
               "src/assets"
             ],
             "styles": [
+              "css/font-awesome.min.cssdsad",
+              "css/ionicons.min.css",
+              "css/bootstrap.min.css",
+              "css/bootstrap-datetimepicker.css",
+              "css/bootstrap-datetimepicker-standalone.css",
+              "css/roundslider.css",
+              "css/magnific-popup.css",
+              "css/jquery.countdown.css",
+              "css/menuzord.css",
+              "css/menuzord-animations.css",
+              "css/owl.carousel.min.css",
+              "css/owl.theme.min.css",
+              "css/responsive.css",
               "src/styles.less"
             ],
             "scripts": []

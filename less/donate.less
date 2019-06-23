@@ -1,0 +1,169 @@
+@import "variables.less"; // variable.less
+@import "mixins.less"; // variable.less
+
+/* -----------------------------------
+**  Donate Page
+-------------------------------------*/
+.donate-form{
+    max-width: 606px;
+    h4{
+        margin-bottom: 15px;
+    }
+    .sune-btn{
+        border:0;
+        min-width: 190px;
+    }
+    .donate-duration,.payment-method{
+        padding-bottom: 26px;
+        .donate-item{
+            display: table;
+            width: 50%;
+            float: left;
+            text-align: center;
+            input[type=radio] {
+              display: none;
+            }
+            label {
+                border-radius: 2px;
+                cursor: pointer;
+                background: #f6f6f6;
+                width: 100%;
+                height:80px ;
+                display: block;
+                display: table-cell;
+                vertical-align: middle;
+                font-weight: 700;
+
+                .t3s;
+                color: #808080;
+                position: relative;
+                &:before{
+                    font-family:'FontAwesome';
+                    content:"\f056";
+                    padding-right: 5px;
+                }
+            }
+            input[type=radio]:checked ~ label {
+                background: @yellow;
+                color: @white;
+                &:before{
+                    content:"\f058";
+                }
+            }
+        }
+        .donate-item.one-time{
+            padding-right: 5px;
+        }
+        .donate-item.monthly{
+            padding-left: 5px;
+        }
+    }
+    .payment-method{
+        span{
+            display: block;
+            margin-bottom: 10px;
+        }
+        .donate-item{
+            label{
+                height: 50px;
+            }
+        }
+    }
+}
+.donate-amount-list{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    .donate-amount-item{
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex:1;
+        text-align: center;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        input[type=radio] {
+          display: none;
+        }
+        label {
+            border-radius: 2px;
+            cursor: pointer;
+            background: #f6f6f6;
+            width: 100%; 
+            height:80px ;
+            font-weight: 400;
+            font-size: 22px;
+            padding-top: 27px;
+            .t3s;
+            color: #808080;
+            position: relative;
+        }
+        input[type=radio]:checked ~ label {
+            background: @yellow;
+            color: @white;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+.worning-box{
+    background: #ffefc2;
+    padding:15px 20px;
+    margin-bottom: 25px;
+    .icon{
+        float: left;
+        width: 30px;
+        font-size: 24px;
+        color: @black;
+    }
+    .text{
+        margin-left: 35px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #808080;
+        a{
+            font-weight: 700;
+            color: #808080;
+            &:hover{
+                color: @black;
+            }
+        }
+    }
+}
+.donate-page-content{
+    .section-heading{
+        padding-bottom: 44px;
+        h2{
+            font-size: 34px;
+            line-height: 34px;
+        }
+    }
+    .causes-detial{
+        .causes-barfiller-item{
+            padding-top: 24px;
+            padding-bottom: 24px;
+            .raised,.goal{
+                font-size: 16px;
+                span{
+                    font-size:16px;
+                }
+            }
+            .barfiller{
+                margin-top: 6px;
+                height: 35px;
+            }
+        }
+        .causes-header{
+            h4{
+                margin-bottom: 7px;
+            }
+        }
+        .share-social-media{
+            padding-top: 22px;
+        }
+    }
+}
+/* -----------------------------------
+**  End Donate Page
+-------------------------------------*/
+

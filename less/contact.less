@@ -1,0 +1,81 @@
+@import "variables.less"; // variable.less
+@import "mixins.less"; // variable.less
+
+
+/* -----------------------------------
+**  Contact Us
+-------------------------------------*/
+.contact-page-banner{
+    background: url('../images/contact/banner.jpg');
+}
+.contact-us{
+    position: relative;
+    .contact-detail{
+        width: 270px;
+        box-shadow: 3px 0 5px rgba(0,0,0,0.08);
+        background: @white;
+        position: absolute;
+        top: 0;
+        left:0;
+        z-index: 1;
+    }
+    .single-information{
+        padding: 30px 15px 20px 15px;
+        border-bottom: 1px solid #e6e6e6;
+        &:last-child{
+            border-bottom: 0;
+        }
+        .icon{
+            width: 90px;
+            height: 90px;
+            background: #999999;
+            text-align: center;
+            color: @white;
+            font-size: 48px;
+            margin:0 auto;
+            border-radius: 500px;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+        span{
+            display: block;
+            margin-bottom: 9px;
+            font-size: 13px;
+        }
+        .mobile-number,.eamil-id,.current-address{
+            font-weight: 500;
+            line-height: 24px;
+            font-size: 16px;
+        }
+
+    }
+    .google-maps-area{
+        vertical-align: top;
+        margin-bottom: 120px;
+        text-align: center;
+        .google-maps{
+             height: 620px;
+        }
+        .colorfull-social-icon{
+            position: absolute;
+            bottom: -35px;
+            z-index: 1;
+            left:50%;
+        }
+        .colorfull-social-icon li a{
+            height: 60px;
+            width: 60px;
+            font-size: 24px;
+            i{
+                padding-top: 8px;
+            }
+        }
+    }
+}
+/* -----------------------------------
+**  End Contact Us
+-------------------------------------*/
+

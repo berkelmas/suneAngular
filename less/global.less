@@ -1,0 +1,618 @@
+@import "variables.less"; // variable.less
+@import "mixins.less"; // variable.less
+/*      Global css
+----------------------------*/
+body{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    font-family: @rb;
+    color: @black;
+}
+a{
+    .t3s;
+    font-weight: 400;
+    color: @black;
+    &:hover,&:focus,&.active{
+        text-decoration: none;
+        outline: none;
+    }
+}
+input,button,textarea,select{
+    .t3s;
+    &:focus{
+        outline:0;
+    }
+}
+input[type='submit']{
+    &:focus{
+        outline:0;
+    }
+}
+/*  Heading Tag
+-------------------*/
+h1,h2,h3,h4,h5,h6{
+    a{
+        font-weight: 700;
+    }
+}
+h1{
+    font-size: 60px;
+    font-weight: 900;
+}
+h2{
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-top: 9px;
+}
+h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-top: 4px; 
+    margin-bottom: 10px;
+
+}
+h4{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+h5{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.clear{
+    clear: both;
+}
+.sune-btn{
+    font-weight: 700;
+    display: inline-block;
+    padding:12px 25px;
+    border-radius: 3px;
+    min-width: 150px;
+    border:0;
+    margin-top: 15px;
+    text-align: center;
+    background: @orange;
+    color: @white;
+    &:hover{
+        color: @white;
+        background: #d03402;
+    }
+    i{
+        margin-left: 5px;
+    }
+}
+.orange-bg{
+    background: @orange;
+    color: @white;
+    &:hover,&:focus{
+        color: @white;
+    }
+}
+.yellow-bg{
+    background: @yellow;
+    color: @white;
+    &:hover,&:focus{
+        color: @white;
+    }
+}
+.ash-white-bg{
+    background: #fafafa;
+}
+.black-bg{
+    background: @black;
+    color: @white;
+    &:hover,&:focus{
+        color: @white;
+    }
+}
+.sune-btn.black-bg{
+    &:hover{
+        background: #000;
+    }
+}
+.yellow{
+    color: @yellow;
+}
+.orange{
+    color: @orange;
+}
+.red{
+    color: @red; 
+}
+.cyan{
+    color: #037cc2;
+}
+.section-heading{
+    text-align: center;
+    h2{
+        line-height: 35px;
+        span{
+            display: block;
+            font-size: 20px;
+            color: #939393;
+        }
+    }
+}
+.section-padding{
+    padding-top: 80px;
+    padding-bottom: 69px;
+}
+
+
+
+
+
+
+.no-margin{
+	margin:0 !important;
+}
+.no-padding{
+	padding:0 !important;
+}
+.no-border{
+    border:0 !important;
+}
+.section-heading  h2{
+
+}
+.row-eq-height{
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    [class*="col-"]{
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column; 
+        -ms-flex-direction: column; 
+        flex-direction: column;
+    }
+}
+.mt5{
+    margin-top: 5px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mt15{
+    margin-top: 15px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt25{
+    margin-top: 25px;
+}
+.mt30{
+    margin-top: 30px;
+}
+.mt35{
+    margin-top: 35px;
+}
+.mt40{
+    margin-top: 40px;
+}
+.mt45{
+    margin-top: 45px;
+}
+.mt50{
+    margin-top: 50px;
+}
+.mt55{
+    margin-top: 55px;
+}
+.mt60{
+    margin-top: 60px;
+}
+.mt65{
+    margin-top: 65px;
+}
+.mt70{
+    margin-top: 70px;
+}
+.mt75{
+    margin-top: 75px;
+}
+.mt80{
+    margin-top: 80px;
+}
+.mt85{
+    margin-top: 85px;
+}
+.mt90{
+    margin-top: 90px;
+}
+.mt95{
+    margin-top: 95px;
+}
+.mt100{
+    margin-top: 100px;
+}
+.mt125{
+    margin-top: 125px;
+}
+.mb5{
+    margin-bottom: 5px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mb15{
+    margin-bottom: 15px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.mb25{
+    margin-bottom: 25px;
+}
+.mb30{
+    margin-bottom: 30px;
+}
+.mb35{
+    margin-bottom: 35px;
+}
+.mb40{
+    margin-bottom: 40px;
+}
+.mb45{
+    margin-bottom: 45px;
+}
+.mb50{
+    margin-bottom: 50px;
+}
+.mb55{
+    margin-bottom: 55px;
+}
+.mb60{
+    margin-bottom: 50px;
+}
+.mb65{
+    margin-bottom: 65px;
+}
+.mb70{
+    margin-bottom: 70px;
+}
+.mb75{
+    margin-bottom: 75px;
+}
+.mb80{
+    margin-bottom: 80px;
+}
+.mb85{
+    margin-bottom: 85px;
+}
+.mb90{
+    margin-bottom: 90px;
+}
+.mb95{
+    margin-bottom: 95px;
+}
+.mb100{
+    margin-bottom: 100px;
+}
+/*   padding
+--------------------------*/
+.pdr0{
+    padding-right: 0;
+}
+.pdl0{
+    padding-left: 0;
+}
+.pdt5{
+    padding-top: 5px;
+}
+.pdt10{
+    padding-top: 10px;
+}
+.pdt15{
+    padding-top: 15px;
+}
+.pdt20{
+    padding-top: 20px;
+}
+.pdt25{
+    padding-top: 25px;
+}
+.pdt30{
+    padding-top: 30px;
+}
+.pdt35{
+    padding-top: 35px;
+}
+.pdt40{
+    padding-top: 40px;
+}
+.pdt45{
+    padding-top: 45px;
+}
+.pdt50{
+    padding-top: 50px;
+}
+.pdt55{
+    padding-top: 55px;
+}
+.pdt60{
+    padding-top: 50px;
+}
+.pdt65{
+    padding-top: 65px;
+}
+.pdt70{
+    padding-top: 70px;
+}
+.pdt75{
+    padding-top: 75px;
+}
+.pdt80{
+    padding-top: 80px;
+}
+.pdt85{
+    padding-top: 85px;
+}
+.pdt90{
+    padding-top: 90px;
+}
+.pdt95{
+    padding-top: 95px;
+}
+.pdt100{
+    padding-top: 100px;
+}
+
+.pdb5{
+    padding-bottom: 5px;
+}
+.pdb10{
+    padding-bottom: 10px;
+}
+.pdb15{
+    padding-bottom: 15px;
+}
+.pdb20{
+    padding-bottom: 20px;
+}
+.pdb25{
+    padding-bottom: 25px;
+}
+.pdb30{
+    padding-bottom: 30px;
+}
+.pdb35{
+    padding-bottom: 35px;
+}
+.pdb40{
+    padding-bottom: 40px;
+}
+.pdb45{
+    padding-bottom: 45px;
+}
+.pdb50{
+    padding-bottom: 50px;
+}
+.pdb55{
+    padding-bottom: 55px;
+}
+.pdb60{
+    padding-bottom: 50px;
+}
+.pdb65{
+    padding-bottom: 65px;
+}
+.pdb70{
+    padding-bottom: 70px;
+}
+.pdb75{
+    padding-bottom: 75px;
+}
+.pdb80{
+    padding-bottom: 80px;
+}
+.pdb85{
+    padding-bottom: 85px;
+}
+.pdb90{
+    padding-bottom: 90px;
+}
+.pdb95{
+    padding-bottom: 95px;
+}
+.pdb100{
+    padding-bottom: 100px;
+}
+.row-eq-tab{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkt-flex-wrap:wrap;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-box-pack: center;
+    -ms-box-pack: center;
+    justify-content: center;
+} 
+/* Preloader */
+#loading {
+  background-color: #00a94f;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  margin-top: 0px;
+  top: 0px;
+}
+#loading #loading-center {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#loading #loading-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 150px;
+  width: 150px;
+  margin-top: -75px;
+  margin-left: -75px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#loading .object {
+  width: 20px;
+  height: 20px;
+  background-color: #FFF;
+  position: absolute;
+  left: 65px;
+  top: 65px;
+  border-radius: 500px;
+}
+#loading .object:nth-child(2n+0) {
+  margin-right: 0px;
+}
+#loading #object_one {
+  -webkit-animation: object_one 2s infinite;
+  animation: object_one 2s infinite;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+#loading #object_two {
+  -webkit-animation: object_two 2s infinite;
+  animation: object_two 2s infinite;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+#loading #object_three {
+  -webkit-animation: object_three 2s infinite;
+  animation: object_three 2s infinite;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+#loading #object_four {
+  -webkit-animation: object_four 2s infinite;
+  animation: object_four 2s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+#loading #object_five {
+  -webkit-animation: object_five 2s infinite;
+  animation: object_five 2s infinite;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+#loading #object_six {
+  -webkit-animation: object_six 2s infinite;
+  animation: object_six 2s infinite;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+#loading #object_seven {
+  -webkit-animation: object_seven 2s infinite;
+  animation: object_seven 2s infinite;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+#loading #object_eight {
+  -webkit-animation: object_eight 2s infinite;
+  animation: object_eight 2s infinite;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+@-webkit-keyframes object_one {
+  50% {
+    -webkit-transform: translate(-65px, -65px);
+  }
+}
+@keyframes object_one {
+  50% {
+    transform: translate(-65px, -65px);
+    -webkit-transform: translate(-65px, -65px);
+  }
+}
+@-webkit-keyframes object_two {
+  50% {
+    -webkit-transform: translate(0, -65px);
+  }
+}
+@keyframes object_two {
+  50% {
+    transform: translate(0, -65px);
+    -webkit-transform: translate(0, -65px);
+  }
+}
+@-webkit-keyframes object_three {
+  50% {
+    -webkit-transform: translate(65px, -65px);
+  }
+}
+@keyframes object_three {
+  50% {
+    transform: translate(65px, -65px);
+    -webkit-transform: translate(65px, -65px);
+  }
+}
+@-webkit-keyframes object_four {
+  50% {
+    -webkit-transform: translate(65px, 0);
+  }
+}
+@keyframes object_four {
+  50% {
+    transform: translate(65px, 0);
+    -webkit-transform: translate(65px, 0);
+  }
+}
+@-webkit-keyframes object_five {
+  50% {
+    -webkit-transform: translate(65px, 65px);
+  }
+}
+@keyframes object_five {
+  50% {
+    transform: translate(65px, 65px);
+    -webkit-transform: translate(65px, 65px);
+  }
+}
+@-webkit-keyframes object_six {
+  50% {
+    -webkit-transform: translate(0, 65px);
+  }
+}
+@keyframes object_six {
+  50% {
+    transform: translate(0, 65px);
+    -webkit-transform: translate(0, 65px);
+  }
+}
+@-webkit-keyframes object_seven {
+  50% {
+    -webkit-transform: translate(-65px, 65px);
+  }
+}
+@keyframes object_seven {
+  50% {
+    transform: translate(-65px, 65px);
+    -webkit-transform: translate(-65px, 65px);
+  }
+}
+@-webkit-keyframes object_eight {
+  50% {
+    -webkit-transform: translate(-65px, 0);
+  }
+}
+@keyframes object_eight {
+  50% {
+    transform: translate(-65px, 0);
+    -webkit-transform: translate(-65px, 0);
+  }
+}

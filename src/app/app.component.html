@@ -1,21 +1,488 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<header>
+    <div class="top-bar-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo">
+                        <a href="index.html"><img src="/assets/images/home/logo.png" alt="logo" /></a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="text-right">
+                        <a href="#" class="doante-button orange-bg">
+                            <span>PLEASE MAKE YOUR</span>
+                            DONATION
+                        </a>
+                        <a href="#" class="doante-button yellow-bg">
+                            <span>TIME TO BECOME A</span>
+                            VOLUNTEER
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-navbar></app-navbar>
+
+
+</header>
+
+<app-slider></app-slider>
+
+<section class="urgent-causes-area ash-white-bg">
+    <div class="container">
+        <div class="section-heading section-padding pdb55">
+            <h2><span> HELP US TO ACHIEVE OUR</span>URGENT CAUSES</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="urgent-causes">
+                    <h3>BUILDING SCHOOL IN AFRICAN COMMUNITIES.</h3>
+                    <p>
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hime naeos. Nam sollicitudin nibh sit amet accumsan lacinia. Praesent sceleris que lectus eu sodales imperdiet. Duis vel luctus sapien.
+                    </p>
+                    <div class="collection-rate">
+                        <div class="accomplish">
+                             <div class="round-slider-collection round-slider-active" id="round-slider-one" data-value="50" data-height="80" data-width="10"></div>
+                        </div>
+                        <div class="fund">
+                            <div class="icon">
+                                <i class="ion-android-arrow-forward"></i>
+                            </div>
+                            <div class="text">
+                                $500
+                                <span>Raised by your help</span>
+                            </div>
+                        </div>
+                        <div class="fund">
+                            <div class="icon">
+                                <i class="ion-android-arrow-forward"></i>
+                            </div>
+                            <div class="text">
+                                $1000
+                                <span>Our initial target</span>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <a href="#" class="sune-btn orange-bg">DONATE <i class="fa fa-heart"></i></a>
+                    <a href="#" class="sune-btn black-bg">DETAILS <i class="ion-android-arrow-forward"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="urgent-causes-image">
+                    <div class="images big-image">
+                        <img src="/assets/images/home/3.jpg" class="img-responsive img-circle" alt="causes">
+                    </div>
+                    <div class="images middum-image">
+                        <img src="/assets/images/home/2.jpg" class="img-responsive img-circle" alt="causes">
+                    </div>
+                    <div class="images small-image">
+                        <img src="/assets/images/home/4.jpg" class="img-responsive img-circle" alt="causes">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/.urgent-causes-area-->
+<section class="get-envolved-area">
+    <div class="container">
+        <div class="section-heading section-padding">
+             <h2><span>WANT TO HELP OTHERS</span>GET INVOLVED</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="get-envolved-item first-item">
+                    <div class="envolped-top">
+                        <div class="text"><span>DONATE</span></div>
+                    </div>
+                    <div class="content">
+                        <h3><a href="#">BECOME A DONATOR</a></h3>
+                        <p>Nam sollicitudin libero eu diam faucibus, sit amet hendrerit scelerisqususcipit.</p>
+                    </div>
+                </div><!--/.get-envolved-item-->
+            </div>
+            <div class="col-md-4">
+                <div class="get-envolved-item second-item">
+                    <div class="envolped-top">
+                        <div class="text"><span>FUNDRAISE</span></div>
+                    </div>
+                    <div class="content">
+                        <h3><a href="#">BECOME A DONATOR</a></h3>
+                        <p>Nam sollicitudin libero eu diam faucibus, sit amet hendrerit scelerisqususcipit.</p>
+                    </div>
+                </div><!--/.get-envolved-item-->
+            </div>
+            <div class="col-md-4">
+                <div class="get-envolved-item third-item">
+                    <div class="envolped-top">
+                        <div class="text"><span>VOLUNTEER</span></div>
+                    </div>
+                    <div class="content">
+                        <h3><a href="#">BECOME A DONATOR</a></h3>
+                        <p>Nam sollicitudin libero eu diam faucibus, sit amet hendrerit scelerisqususcipit.</p>
+                    </div>
+                </div><!--/.get-envolved-item-->
+            </div>
+        </div>
+    </div>
+</section><!--/.get-envolved-area-->
+<section class="recent-causes-area ash-white-bg">
+    <div class="container">
+        <div class="section-heading section-padding">
+             <h2><span>LEARN MORE ABOUT OUR</span>RECENT CAUSES</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="recent-causes-item">
+                      <div id="progress" class="colorfull-progress-active causes-item1" data-dimension="200" data-text="" data-percent="65" data-fgcolor="#ff5722" data-bgcolor="transparent" data-width="10" data-bordersize="10" data-animationstep="2"></div>
+                     <div class="raised-targent"><span>RAISED: $764</span><span class="pull-right">TARGET: $1500</span></div>
+                     <div class="recent-causes-text text-center">
+                         <h3><a href="#">CONNECTING THE PEOPLE</a></h3>
+                         <p>Nam sollicitudin libero eudiam faucibus sit amet hendrerit sceleris qususci pitsit amethe ndrerit scelerisqususcipit.</p>
+                         <a href="#" class="sune-btn orange-bg">DONATE <i class="fa fa-heart"></i></a>
+                     </div>
+                </div><!--/.recent-causes-item-->
+            </div>
+            <div class="col-md-4">
+                <div class="recent-causes-item">
+                     <div id="progress2" class="colorfull-progress-active causes-item2" data-dimension="200" data-text="" data-percent="65" data-fgcolor="#ff5722" data-bgcolor="transparent" data-width="10" data-bordersize="10" data-animationstep="2"></div>
+                     <div class="raised-targent"><span>RAISED: $764</span><span class="pull-right">TARGET: $1500</span></div>
+                     <div class="recent-causes-text text-center">
+                         <h3><a href="#">CONNECTING THE PEOPLE</a></h3>
+                         <p>Nam sollicitudin libero eudiam faucibus sit amet hendrerit sceleris qususci pitsit amethe ndrerit scelerisqususcipit.</p>
+                         <a href="#" class="sune-btn orange-bg">DONATE <i class="fa fa-heart"></i></a>
+                     </div>
+                </div><!--/.recent-causes-item-->
+            </div>
+            <div class="col-md-4">
+                <div class="recent-causes-item">
+                     <div id="progress3" class="colorfull-progress-active causes-item3" data-dimension="200" data-text="" data-percent="65" data-fgcolor="#ff5722" data-bgcolor="transparent" data-width="10" data-bordersize="10" data-animationstep="2"></div>
+                     <div class="raised-targent"><span>RAISED: $764</span><span class="pull-right">TARGET: $1500</span></div>
+                     <div class="recent-causes-text text-center">
+                         <h3><a href="#">CONNECTING THE PEOPLE</a></h3>
+                         <p>Nam sollicitudin libero eudiam faucibus sit amet hendrerit sceleris qususci pitsit amethe ndrerit scelerisqususcipit.</p>
+                         <a href="#" class="sune-btn orange-bg">DONATE <i class="fa fa-heart"></i></a>
+                     </div>
+                </div><!--/.recent-causes-item-->
+            </div>
+        </div>
+        <div class="all-causes-page text-center ">Do you want learn more about our all causes. Please visit <a href="#">all causes page</a>.</div>
+    </div>
+</section><!--/.recent-causes-area-->
+<section class="upcaming-event-area">
+    <div class="container">
+         <div class="section-heading section-padding">
+             <h2><span>KNOW AND COME TO JOIN OUR</span>UPCOMING EVENTS</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="upcomming-event-item">
+                    <div class="image">
+                        <img src="/assets/images/home/8.jpg" class="img-responsive" alt="upcomming">
+                        <span><i class="ion-android-arrow-forward"></i></span>
+                    </div>
+                    <div class="event-text text-center">
+                        <h3><a href="#">CHILDREN OF SOCIETY</a></h3>
+                        <p>Estibulum at maximus neque. Etiam interdum fermentum dolor, eget placerat lorem.</p>
+                        <div class="event-counter">
+                            <div id="event-one-counter"></div>
+                        </div>
+                    </div>
+                    <div class="event-place-ticket">
+                        <div class="place">
+                            <strong>PLACE:</strong>
+                            EASTER COAST HOTEL, CA
+                        </div>
+                        <div class="ticket">
+                            <strong>TICKET:</strong>
+                            FREE OF COST
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div><!--/.upcomming-event-item-->
+            </div>
+            <div class="col-md-4">
+                <div class="upcomming-event-item">
+                    <div class="image">
+                        <img src="/assets/images/home/9.jpg" class="img-responsive" alt="upcomming">
+                        <span><i class="ion-android-arrow-forward"></i></span>
+                    </div>
+                    <div class="event-text text-center">
+                        <h3><a href="#">CHILDREN OF SOCIETY</a></h3>
+                        <p>Estibulum at maximus neque. Etiam interdum fermentum dolor, eget placerat lorem.</p>
+                        <div class="event-counter">
+                            <div id="event-two-counter"></div>
+                        </div>
+                    </div>
+                    <div class="event-place-ticket">
+                        <div class="place">
+                            <strong>PLACE:</strong>
+                            EASTER COAST HOTEL, CA
+                        </div>
+                        <div class="ticket">
+                            <strong>TICKET:</strong>
+                            FREE OF COST
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div><!--/.upcomming-event-item-->
+            </div>
+            <div class="col-md-4">
+                <div class="upcomming-event-item">
+                    <div class="image">
+                        <img src="/assets/images/home/10.jpg" class="img-responsive" alt="upcomming">
+                        <span><i class="ion-android-arrow-forward"></i></span>
+                    </div>
+                    <div class="event-text text-center">
+                        <h3><a href="#">CHILDREN OF SOCIETY</a></h3>
+                        <p>Estibulum at maximus neque. Etiam interdum fermentum dolor, eget placerat lorem.</p>
+                        <div class="event-counter">
+                            <div id="event-three-counter"></div>
+                        </div>
+                    </div>
+                    <div class="event-place-ticket">
+                        <div class="place">
+                            <strong>PLACE:</strong>
+                            EASTER COAST HOTEL, CA
+                        </div>
+                        <div class="ticket">
+                            <strong>TICKET:</strong>
+                            FREE OF COST
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div><!--/.upcomming-event-item-->
+            </div>
+        </div>
+        <div class="all-causes-page text-center ">Do you want learn more about our all causes. Please visit <a href="#">all events page</a>.</div>
+    </div>
+</section><!--/.upcaming-event-area-->
+<section class="deference-making-area ash-white-bg">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-lg-6 pdr0 pdl0">
+                <div class="image">
+                    <img src="/assets/images/home/11.jpg" class="img-responsive" alt="making deference">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="diference-making-text">
+                    <h2>DIFFERENCE WE ARE MAKING</h2>
+                    <p>Pellentesque sollicitudin fringilla orci, ullamcorper ultrices sapien elementum facilisis. Mauris dictum metus sed libero egestas, ut hendrerit massa gravida.</p>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="deference-making-item">
+                                <div class="icon">
+                                    <img src="/assets/images/home/icon/4.png" alt="icon">
+                                </div>
+                                <div class="text">
+                                    <span class="orange">$8765</span>
+                                    People Contribution
+                                </div>
+                                <div class="clear"></div>
+                            </div><!--/.deference-making-item-->
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="deference-making-item">
+                                <div class="icon">
+                                    <img src="/assets/images/home/icon/5.png" alt="icon">
+                                </div>
+                                <div class="text">
+                                    <span class="orange">5847</span>
+                                    Volunteer Reached
+                                </div>
+                                <div class="clear"></div>
+                            </div><!--/.deference-making-item-->
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="deference-making-item">
+                                <div class="icon">
+                                    <img src="/assets/images/home/icon/6.png" alt="icon">
+                                </div>
+                                <div class="text">
+                                    <span class="orange">54</span>
+                                    Successful Project
+                                </div>
+                                <div class="clear"></div>
+                            </div><!--/.deference-making-item-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/.deference-making-area-->
+<section class="recent-news-area">
+    <div class="container">
+        <div class="section-heading section-padding">
+             <h2><span>READ OUR EXCITING</span>RECENT NEWS</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="news-item">
+                    <div class="image">
+                        <img src="/assets/images/home/12.jpg" class="img-responsive" alt="news">
+                        <div class="news-date-circle">
+                             <span>4</span>
+                            February
+                            2017
+                        </div>
+                    </div>
+                    <div class="news-text">
+                        <h3><a href="#">The Fisher House Child</a></h3>
+                        <span class="yellow-bg author-name">admin</span>
+                        <p>Donec venenatis metus at diam condimentum pretium. Integer aliquet a turpis.</p>
+                    </div>
+                    <a href="#" class="read-more-icon"><span>+</span></a>
+                </div><!--/.news-item-->
+            </div>
+            <div class="col-md-4">
+                <div class="news-item">
+                    <div class="image">
+                        <img src="/assets/images/home/13.jpg" class="img-responsive" alt="news">
+                        <div class="news-date-circle">
+                            <span>4</span>
+                            February
+                            2017
+                        </div>
+                    </div>
+                    <div class="news-text">
+                        <h3><a href="#">The Fisher House Child</a></h3>
+                        <span class="yellow-bg author-name">admin</span>
+                        <p>Donec venenatis metus at diam condimentum pretium. Integer aliquet a turpis.</p>
+                    </div>
+                    <a href="#" class="read-more-icon"><span>+</span></a>
+                </div><!--/.news-item-->
+            </div>
+            <div class="col-md-4">
+                <div class="news-item">
+                    <div class="image">
+                        <img src="/assets/images/home/14.jpg" class="img-responsive" alt="news">
+                        <div class="news-date-circle">
+                            <span>4</span>
+                            February
+                            2017
+                        </div>
+                    </div>
+                    <div class="news-text">
+                        <h3><a href="#">The Fisher House Child</a></h3>
+                        <span class="yellow-bg author-name">admin</span>
+                        <p>Donec venenatis metus at diam condimentum pretium. Integer aliquet a turpis.</p>
+                    </div>
+                    <a href="#" class="read-more-icon"><span>+</span></a>
+                </div><!--/.news-item-->
+            </div>
+        </div>
+    </div>
+</section><!--/.recent-news-area-->
+<div class="subscribe-box-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading">
+                    <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <p>There are lots of valueable information around the world,We help
+                    you to know the unknown. </p>
+                </div>
+                <div class="subscribe-box">
+                    <input type="email" class="form-control subscribe-input-field" placeholder="Your Email Address">
+                    <button type="submit" class="form-control submit-button"><span>SEND</span> <i class="ion-android-arrow-forward"></i></button>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div><!--/.recent-news-area-->
+<footer class="main-footer-area">
+    <div class="footer-adderess-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo">
+                        <a href="#"><img src="/assets/images/home/footer-logo.png" class="img-responsive" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="footer-address text-right">
+                        <p>Donec venenatis metus at diam condimentum pretiuteger aliquet a turpis quis pel len tesque  ueta turpis quis venenatissolelementum </p>
+                        <ul>
+                            <li><i class="fa fa-map-marker"></i> Albrata Street, 23/D-2, Building, CA, US </li>
+                            <li><i class="ion-iphone"></i> +11 (09) 876543 </li>
+                            <li><i class="ion-forward"></i> support@domian.com </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-important-link">
+                        <h4 class="orange">IMPORTANT LINKS</h4>
+                        <ul>
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="#">COMPANY PROFILE</a></li>
+                            <li><a href="#">LEGAL POLICY</a></li>
+                            <li><a href="#">COPYRIGHT ISSUES</a></li>
+                            <li><a href="#">GLOBAL OFFICES</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-update-news">
+                    <h4 class="orange">GLOBAL UPDATE NEWS </h4>
+                        <ul>
+                            <li><i class="ion-social-youtube"></i><a href="#">100 CHILDREN RESCUE FROM WAR ZONE</a></li>
+                            <li><i class="ion-document-text"></i><a href="#"> PEOPLE DIE IN THE WEST LIKE BEFORE EAST</a></li>
+                            <li><i class="ion-log-in"></i><a href="#">AWARENESS CAMPAIGN IS GOING CRAZY</a></li>
+                            <li><i class="ion-social-youtube"></i><a href="#">WHAT HAPPEN WHEN WE LIVE!</a></li>
+                            <li><i class="ion-document-text"></i><a href="#">AWARENESS CAMPAIGN IS GOING CRAZY</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12">
+                    <div class="footer-gallery">
+                        <h4 class="orange">PHOTO GALLERY</h4>
+                        <ul>
+                            <li><a href="#"><img src="/assets/images/footer/1.jpg" class="img-responsive" alt="gallery"></a></li>
+                            <li><a href="#"><img src="/assets/images/footer/2.jpg" class="img-responsive" alt="gallery"></a></li>
+                            <li><a href="#"><img src="/assets/images/footer/3.jpg" class="img-responsive" alt="gallery"></a></li>
+                            <li><a href="#"><img src="/assets/images/footer/4.jpg" class="img-responsive" alt="gallery"></a></li>
+                            <li><a href="#"><img src="/assets/images/footer/5.jpg" class="img-responsive" alt="gallery"></a></li>
+                            <li><a href="#"><img src="/assets/images/footer/6.jpg" class="img-responsive" alt="gallery"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-6">
+                    <div class="footer-social-icon text-right">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-lg-pull-6">
+                    <div class="copy-right-text">
+                        @2017 ALL RIGHTS RESERVED BY <a href="http://enroutedigitallab.com/" class="yellow">ENROUTE DIGITAL LAB</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
