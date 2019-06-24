@@ -2,7 +2,7 @@
 
     <div class="image-slider" (swipeleft)="swiped($event.type)" (swiperight)="swiped($event.type)">
 
-        <div *ngIf="currentSlide === 1" [@changeSlide]="'currentSlide'" class="slider-single-item">
+        <div *ngIf="currentSlide === 1" [@changeSlideLeft]="animationState" class="slider-single-item">
             <img src="/assets/images/home/1.jpg" alt="First slide">
            <div class="overlay"></div>
             <div class="container-parent">
@@ -18,7 +18,7 @@
             </div>
         </div><!--/.single-item -->
 
-        <div *ngIf="currentSlide === 2" [@changeSlide]="'currentSlide'" class="slider-single-item">
+        <div *ngIf="currentSlide === 2" [@changeSlideLeft]="animationState" class="slider-single-item">
             <img  src="/assets/images/home/1.jpg" alt="First slide">
            <div class="overlay"></div>
             <div class="container-parent">
@@ -34,7 +34,7 @@
             </div>
         </div><!--/.single-item -->
 
-        <div *ngIf="currentSlide === 3" [@changeSlide]="'currentSlide'" class="slider-single-item">
+        <div *ngIf="currentSlide === 3" [@changeSlideLeft]="animationState" class="slider-single-item">
             <img src="/assets/images/home/1.jpg" alt="First slide">
            <div class="overlay"></div>
             <div class="container-parent">

@@ -7,8 +7,8 @@
                     <h1>ABOUT SUNE <span>IT IS ALL ABOUT SUNE NON-PROFIT CHARITY TEMPLATE.</span></h1>
                 </div>
                 <ul class="bread-crumb">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#" class="active orange">ABOUT US</a></li>
+                    <li><a [routerLink]="['/']">Ana Sayfa</a></li>
+                    <li><a [routerLink]="['/hakkimizda']"  class="active orange">Hakkımızda</a></li>
                 </ul>
             </div>
         </div>
@@ -124,7 +124,10 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="recent-causes-item">
-                     <div id="progress" class="colorfull-progress-active causes-item1" data-dimension="200" data-text="" data-percent="65" data-fgcolor="#ff5722" data-bgcolor="transparent" data-width="10" data-bordersize="10" data-animationstep="2"></div>
+                    <div class="recent-causes-progressbar">
+                      <img class="recent-causes-progressbar-img" src="https://media.children.org/cdn-8d444fdea239e20/globalassets/00_home-page/holiday-home-page/how-you-help5.jpg" alt="">
+                      <div class="recent-causes-progressbar-overlay"></div>
+                    </div>
                      <div class="recent-causes-text text-center">
                          <h3><a href="#">Alexgender Grahambell</a></h3>
                          <span class="designation yellow">PSYCHOLOGIST</span>
@@ -140,7 +143,10 @@
             </div>
             <div class="col-md-4">
                 <div class="recent-causes-item">
-                     <div id="progress2" class="colorfull-progress-active causes-item2" data-dimension="200" data-text="" data-percent="65" data-fgcolor="#ff5722" data-bgcolor="transparent" data-width="10" data-bordersize="10" data-animationstep="2"></div>
+                    <div class="recent-causes-progressbar">
+                      <img class="recent-causes-progressbar-img" src="https://media.children.org/cdn-8d444fdea239e20/globalassets/00_home-page/holiday-home-page/how-you-help5.jpg" alt="">
+                      <div class="recent-causes-progressbar-overlay"></div>
+                    </div>
                      <div class="recent-causes-text text-center">
                          <h3><a href="#">Alexgender Grahambell</a></h3>
                          <span class="designation yellow">PSYCHOLOGIST</span>
@@ -156,7 +162,10 @@
             </div>
             <div class="col-md-4">
                 <div class="recent-causes-item">
-                     <div id="progress3" class="colorfull-progress-active causes-item3" data-dimension="200" data-text="" data-percent="65" data-fgcolor="#ff5722" data-bgcolor="transparent" data-width="10" data-bordersize="10" data-animationstep="2"></div>
+                    <div class="recent-causes-progressbar">
+                      <img class="recent-causes-progressbar-img" src="https://media.children.org/cdn-8d444fdea239e20/globalassets/00_home-page/holiday-home-page/how-you-help5.jpg" alt="">
+                      <div class="recent-causes-progressbar-overlay"></div>
+                    </div>
                      <div class="recent-causes-text text-center">
                          <h3><a href="#">Alexgender Grahambell</a></h3>
                          <span class="designation yellow">PSYCHOLOGIST</span>
@@ -177,7 +186,7 @@
     <div class="container-fluid ">
         <div class="row">
             <div class="col-lg-6 pdr0 pdl0">
-                <div class="image">
+                <div style="height: 480px;" class="image">
                     <img src="/assets/images/about/3.jpg" class="img-responsive" alt="makigng deference">
                 </div>
             </div>

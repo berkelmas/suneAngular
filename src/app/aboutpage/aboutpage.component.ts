@@ -10,7 +10,7 @@ import {
 @Component({
   selector: 'app-aboutpage',
   templateUrl: './aboutpage.component.html',
-  styleUrls: ['./aboutpage.component.less'],
+  styleUrls: ['./aboutpage.component.less', '../recentcauses/recentcauses.component.less'],
   animations: [
     trigger('changeTestAnimation', [
       state('void', style({transform: 'translateX(-1000px)'})),

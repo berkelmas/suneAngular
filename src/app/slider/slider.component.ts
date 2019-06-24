@@ -12,17 +12,42 @@ import {
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.less'],
   animations: [
-    trigger('changeSlide', [
-      state('currentSlide', style({opacity: 1})),
-      state('void', style({opacity: 0, transform: 'translateY(-300px)'})),
-      transition('void => currentSlide', animate('1s'))
-    ])
+    trigger('changeSlideLeft', [
+      transition('void => currentSlideLeft',
+        [
+          style({opacity: 0, transform: 'translateX(100%)'}),
+          animate('500ms ease-in')
+        ]
+      ),
+      transition('currentSlideLeft => void',
+        [
+          style({position : 'absolute', top: 0, left: 0}),
+          animate('400ms ease-in', style({opacity: 0}))
+        ]
+      ),
+
+      transition('void => currentSlideRight',
+        [
+          style({opacity: 0, transform: 'translateX(-100%)'}),
+          animate('500ms ease-in')
+        ]
+      ),
+      transition('currentSlideRight => void',
+        [
+          style({position : 'absolute', top: 0, left: 0}),
+          animate('400ms ease-in', style({opacity: 0}))
+        ]
+      ),
+    ]),
+
   ]
 })
 export class SliderComponent implements AfterViewInit {
   SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
   sliderCount: number = 3;
   currentSlide: number = 1;
+
+  animationState: string;
 
   constructor() {}
 
@@ -50,8 +75,10 @@ export class SliderComponent implements AfterViewInit {
   swiped(e) {
     console.log(e);
     if (e === this.SWIPE_ACTION.RIGHT) {
+      this.animationState = "currentSlideRight";
       this.prevSlide();
     } else if (e === this.SWIPE_ACTION.LEFT) {
+      this.animationState = "currentSlideLeft";
       this.nextSlide();
     }
   }

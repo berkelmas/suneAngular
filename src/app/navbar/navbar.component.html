@@ -6,8 +6,8 @@
                           <a (click)="changeMenuState()" class="showhide menu-toggle-bar"><span></span></a>
 
                            <ul *ngIf="menuOpen" [@changeMenuState]="'menuOpened'" class="menuzord-menu">
-                               <li><a [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active">Home</a></li>
-                               <li><a routerLink="/hakkimizda" routerLinkActive="active">ABOUT</a></li>
+                               <li><a [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active">Ana Sayfa</a></li>
+                               <li><a routerLink="/hakkimizda" routerLinkActive="active">Hakkımızda</a></li>
                                <li><a href="causes.html">CAUSES</a></li>
                                <li><a href="event-list.html">EVENTS</a></li>
                                <li ><a href="contact-us.html">CONTACT US</a></li>
