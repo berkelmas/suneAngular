@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./differencemaking.component.less']
 })
 export class DifferencemakingComponent implements OnInit {
+  offset: number = 100;
 
   constructor() { }
 

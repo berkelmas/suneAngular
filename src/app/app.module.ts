@@ -5,6 +5,7 @@ import { FormsModule }   from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,7 +43,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
     BrowserModule.withServerTransition({appId: "suneAngular"}),
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    LazyLoadImageModule
   ],
   providers: [
     {
