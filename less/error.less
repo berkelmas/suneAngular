@@ -5,10 +5,12 @@
 **  Error Page
 -------------------------------------*/
 .error-page-body{
-    background: url('../images/error/error.jpg');
+    background-image : linear-gradient(to right bottom, rgba(@orange, .3), rgba(gray, .2));
     position: relative;
     background-size: cover;
     background-position: center center;
+    box-shadow: 0 0 5px rgba(black, .3);
+
     &:before{
         position: absolute;
         width: 100%;
@@ -17,7 +19,7 @@
         left:0;
         top:0;
         background: rgba(255, 255, 255, .80);
-    } 
+    }
 }
 .error-page-content{
     text-align: center;
@@ -69,11 +71,21 @@
             display: inline-block;
             list-style: none;
             padding:0 33px;
-            a{
-                color: @yellow;
-                font-weight: 900;
-                font-size: 18px;
+            transition: all .5s;
+
+            &:hover {
+              transform: scale(1.1);
             }
+
+            a {
+              color: @yellow;
+              font-weight: 900;
+              font-size: 18px;
+
+              &:hover {
+                color : lighten(@yellow, 10%);
+              }
+              }
         }
     }
 }

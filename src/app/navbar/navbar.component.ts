@@ -14,7 +14,6 @@ import {
   transition
 } from '@angular/animations';
 
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -32,6 +31,7 @@ import {
   ]
 })
 export class NavbarComponent implements OnInit, AfterViewInit {
+  activeMenu: string;
   menuOpen: boolean;
   @HostListener('window:resize', ['$event']) onResize(event) {
     if (event.target.innerWidth > 991) {
@@ -39,9 +39,10 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     }
   }
 
-  constructor(private cdr: ChangeDetectorRef) { }
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
+
   }
 
   ngAfterViewInit() {

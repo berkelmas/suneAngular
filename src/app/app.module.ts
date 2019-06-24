@@ -12,6 +12,9 @@ import { SliderComponent } from './slider/slider.component';
 import { RecentcausesComponent } from './recentcauses/recentcauses.component';
 import { UrgentcausesComponent } from './urgentcauses/urgentcauses.component';
 import { DifferencemakingComponent } from './differencemaking/differencemaking.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { AboutpageComponent } from './aboutpage/aboutpage.component';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -26,7 +29,10 @@ export class MyHammerConfig extends HammerGestureConfig  {
     SliderComponent,
     RecentcausesComponent,
     UrgentcausesComponent,
-    DifferencemakingComponent
+    DifferencemakingComponent,
+    MainpageComponent,
+    AboutpageComponent,
+    ErrorpageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: "suneAngular"}),

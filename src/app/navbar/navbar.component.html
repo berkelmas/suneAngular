@@ -6,30 +6,12 @@
                           <a (click)="changeMenuState()" class="showhide menu-toggle-bar"><span></span></a>
 
                            <ul *ngIf="menuOpen" [@changeMenuState]="'menuOpened'" class="menuzord-menu">
-                               <li><a href="index.html" class="active">Home</a></li>
-                               <li><a href="about.html">ABOUT</a></li>
-                               <li><a href="causes.html">CAUSES</a>
-                                   <ul class="dropdown">
-                                       <li><a href="causes-detail.html">CAUSES DETAIL</a></li>
-                                   </ul>
-                               </li>
-                               <li><a href="event-list.html">EVENTS</a>
-                                   <ul class="dropdown">
-                                       <li><a href="event-detail.html">EVENT DETAIL</a>
-                                       <li><a href="event-calender.html">EVENT CALENDER</a></li>
-                                   </ul>
-                               </li>
+                               <li><a [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active">Home</a></li>
+                               <li><a routerLink="/hakkimizda" routerLinkActive="active">ABOUT</a></li>
+                               <li><a href="causes.html">CAUSES</a></li>
+                               <li><a href="event-list.html">EVENTS</a></li>
                                <li ><a href="contact-us.html">CONTACT US</a></li>
-                               <li><a href="#">PAGES</a>
-                                   <ul class="dropdown">
-                                       <li><a href="blog-list.html">BLOG LIST</a></li>
-                                       <li><a href="blog-detail.html">BLOG DETAIL</a></li>
-                                       <li><a href="donate-page.html">DONATE PAGE</a></li>
-                                       <li><a href="shop.html">SHOP PAGE</a></li>
-                                       <li><a href="shop-detail.html">SHOP DETAIL</a></li>
-                                       <li><a href="error.html">404 PAGE</a></li>
-                                   </ul>
-                               </li>
+                               <li><a href="#">PAGES</a></li>
                            </ul>
                        </nav>
 
