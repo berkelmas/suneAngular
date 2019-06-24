@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit, OnDestroy } from '@angular/core';
 import {
   trigger,
   state,
@@ -42,16 +42,26 @@ import {
 
   ]
 })
-export class SliderComponent implements AfterViewInit {
+export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
   SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
   sliderCount: number = 3;
   currentSlide: number = 1;
+  animationInterval: number;
 
   animationState: string;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.animationInterval = setInterval(() => {
+      this.animationState = "currentSlideLeft";
+      this.nextSlide();
+    },5000)
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.animationInterval);
+  }
 
   ngAfterViewInit() {
   }

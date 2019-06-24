@@ -3,7 +3,12 @@
         <div class="row">
             <div class="col-lg-6 pdr0 pdl0 deneme-container">
                 <div class="image">
-                    <img src="/assets/images/home/11.jpg" class="img-responsive" alt="makigng deference">
+                    <img
+                      [defaultImage]="''"
+                      [lazyLoad]="'/assets/images/home/11.jpg'"
+                      [offset]="offset"
+                      class="img-responsive"
+                      alt="makigng deference">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -15,7 +20,7 @@
                             <div class="deference-making-item">
                                 <div class="icon">
                                     <img
-                                      [defaultImage]="'/assets/images/grayimageplaceholder.png'"
+                                      [defaultImage]="''"
                                       [lazyLoad]="'/assets/images/home/icon/4.png'"
                                       [offset]="offset"
                                       alt="icon">
