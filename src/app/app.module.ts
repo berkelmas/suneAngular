@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+import { FormsModule }   from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
@@ -15,6 +17,7 @@ import { DifferencemakingComponent } from './differencemaking/differencemaking.c
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { ContactuspageComponent } from './contactuspage/contactuspage.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -32,12 +35,14 @@ export class MyHammerConfig extends HammerGestureConfig  {
     DifferencemakingComponent,
     MainpageComponent,
     AboutpageComponent,
-    ErrorpageComponent
+    ErrorpageComponent,
+    ContactuspageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: "suneAngular"}),
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [
     {
