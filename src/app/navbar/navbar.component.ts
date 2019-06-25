@@ -3,8 +3,11 @@ import {
   OnInit,
   HostListener,
   AfterViewInit,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  Inject, PLATFORM_ID
 } from '@angular/core';
+
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 import {
   trigger,
@@ -39,20 +42,22 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     }
   }
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, @Inject(PLATFORM_ID) private platformId: any) {}
 
   ngOnInit() {
 
   }
 
   ngAfterViewInit() {
-    if (window.innerWidth < 991) {
-      this.menuOpen = false;
-    } else {
-      this.menuOpen = true;
-    }
+    if (isPlatformBrowser(this.platformId)) {
+      if (window.innerWidth < 991) {
+        this.menuOpen = false;
+      } else {
+        this.menuOpen = true;
+      }
 
-    this.cdr.detectChanges();
+      this.cdr.detectChanges();
+    }
   }
 
   changeMenuState() {

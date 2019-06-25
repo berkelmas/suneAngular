@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnInit, OnDestroy,Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy,Inject, PLATFORM_ID } from '@angular/core';
 import {
   trigger,
   state,
@@ -44,7 +44,7 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
   ]
 })
-export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
+export class SliderComponent implements OnInit, OnDestroy {
   SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
   sliderCount: number = 3;
   currentSlide: number = 1;
@@ -55,22 +55,19 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
   ngOnInit() {
-      if (isPlatformBrowser(this.platformId)) {
-        this.animationInterval = setInterval(() => {
-          this.animationState = "currentSlideLeft";
-          this.nextSlide();
-        },5000)
-      }
+    if (isPlatformBrowser(this.platformId)) {
+      this.animationInterval = setInterval(() => {
+        this.animationState = "currentSlideLeft";
+        this.nextSlide();
+      },5000)
     }
+  }
 
 
   ngOnDestroy() {
     if (isPlatformBrowser(this.platformId)) {
       clearInterval(this.animationInterval);
     }
-  }
-
-  ngAfterViewInit() {
   }
 
   nextSlide() {
