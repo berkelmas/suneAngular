@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnInit, OnDestroy } from '@angular/core';
+import { Component, AfterViewInit, OnInit, OnDestroy,Inject, PLATFORM_ID } from '@angular/core';
 import {
   trigger,
   state,
@@ -6,6 +6,8 @@ import {
   animate,
   transition
 } from '@angular/animations';
+
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Component({
   selector: 'app-slider',
@@ -46,21 +48,26 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
   SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
   sliderCount: number = 3;
   currentSlide: number = 1;
-  animationInterval: number;
+  animationInterval: any;
 
   animationState: string;
 
-  constructor() {}
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
   ngOnInit() {
-    this.animationInterval = setInterval(() => {
-      this.animationState = "currentSlideLeft";
-      this.nextSlide();
-    },5000)
-  }
+      if (isPlatformBrowser(this.platformId)) {
+        this.animationInterval = setInterval(() => {
+          this.animationState = "currentSlideLeft";
+          this.nextSlide();
+        },5000)
+      }
+    }
+
 
   ngOnDestroy() {
-    clearInterval(this.animationInterval);
+    if (isPlatformBrowser(this.platformId)) {
+      clearInterval(this.animationInterval);
+    }
   }
 
   ngAfterViewInit() {
@@ -83,13 +90,14 @@ export class SliderComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   swiped(e) {
-    console.log(e);
-    if (e === this.SWIPE_ACTION.RIGHT) {
-      this.animationState = "currentSlideRight";
-      this.prevSlide();
-    } else if (e === this.SWIPE_ACTION.LEFT) {
-      this.animationState = "currentSlideLeft";
-      this.nextSlide();
+    if (isPlatformBrowser(this.platformId)) {
+      if (e === this.SWIPE_ACTION.RIGHT) {
+        this.animationState = "currentSlideRight";
+        this.prevSlide();
+      } else if (e === this.SWIPE_ACTION.LEFT) {
+        this.animationState = "currentSlideLeft";
+        this.nextSlide();
+      }
     }
   }
 
