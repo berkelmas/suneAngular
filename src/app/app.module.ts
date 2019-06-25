@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title, Meta } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { FormsModule }   from '@angular/forms';
@@ -50,7 +50,9 @@ export class MyHammerConfig extends HammerGestureConfig  {
     {
     provide: HAMMER_GESTURE_CONFIG,
     useClass: MyHammerConfig
-    }
+    },
+    Title,
+    Meta
   ],
   bootstrap: [AppComponent]
 })

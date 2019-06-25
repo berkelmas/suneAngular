@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-errorpage',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErrorpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private title: Title, private meta: Meta) { }
 
   ngOnInit() {
+    this.title.setTitle('Başak Sanat - Hata !');
+    this.meta.addTag({name: 'description', content: 'Burası Hata Sayfasıdır.'})
   }
 
 }
