@@ -7,11 +7,39 @@
 
                            <ul *ngIf="menuOpen" [@changeMenuState]="'menuOpened'" class="menuzord-menu">
                                <li><a [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active">Ana Sayfa</a></li>
-                               <li><a routerLink="/hakkimizda" routerLinkActive="active">Hakkımızda</a></li>
-                               <li><a href="causes.html">CAUSES</a></li>
-                               <li><a href="event-list.html">EVENTS</a></li>
-                               <li ><a routerLink="/bize-ulasin" routerLinkActive="active">Bİze Ulaşın</a></li>
-                               <li><a href="#">PAGES</a></li>
+
+                                <li class="hovered-item">
+                                  <a style="cursor: pointer;">Hakkımızda</a>
+                                  <ul class="dropdown item-to-open">
+                                       <li><a routerLink="/hakkimizda" routerLinkActive="active">BİZ KİMİZ?</a></li>
+                                       <li><a routerLink="/tarihce" routerLinkActive="active">TARİHÇE</a></li>
+                                   </ul>
+                                </li>
+
+                               <li class="hovered-item">
+                                 <a style="cursor: pointer;">Çalışmalar</a>
+                                 <ul class="dropdown item-to-open">
+                                      <li><a href="#">PROJELER</a></li>
+                                      <li><a href="#">ATÖLYELER</a></li>
+                                      <li><a href="#">BURSLAR</a></li>
+                                  </ul>
+                               </li>
+                               <li class="hovered-item">
+                                 <a style="cursor: pointer;">GÖNÜLLÜLÜK</a>
+                                 <ul class="dropdown item-to-open">
+                                      <li><a routerLink="gonullulerimiz">GÖNÜLLÜLERİMİZ</a></li>
+                                      <li><a routerLink="gonullu-olun">GÖNÜLLÜ OLUN</a></li>
+                                  </ul>
+                               </li>
+
+                               <li class="hovered-item">
+                                 <a style="cursor: pointer;">DUYURULAR</a>
+                                 <ul class="dropdown item-to-open">
+                                      <li><a href="#">GÜNCEL DUYURULAR</a></li>
+                                      <li><a href="#">DUYURU ARŞİVİ</a></li>
+                                  </ul>
+                               </li>
+                               <li ><a routerLink="/bize-ulasin" routerLinkActive="active">BİZE ULAŞIN</a></li>
                            </ul>
                        </nav>
 

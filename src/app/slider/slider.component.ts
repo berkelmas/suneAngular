@@ -7,7 +7,7 @@ import {
   transition
 } from '@angular/animations';
 
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-slider',

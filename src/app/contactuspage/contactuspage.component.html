@@ -9,11 +9,11 @@
        <div class="row">
            <div class="col-md-12">
                <div class="banner-title">
-                   <h1>CONTACT US<span>CONTACT PAGE OF NON-PROFIT CHARITY TEMPLATE.</span></h1>
+                   <h1>İLETİŞİM</h1>
                </div>
                <ul class="bread-crumb">
-                   <li><a href="index.html">HOME</a></li>
-                   <li><a href="#" class="active orange">CONTACT US</a></li>
+                   <li><a routerLink="/">Ana Sayfa</a></li>
+                   <li><a routerLink="bize-ulasin">Bize Ulaşın</a></li>
                </ul>
            </div>
        </div>
@@ -29,21 +29,21 @@
                            <div class="icon">
                              <i class="fa fa-mobile"></i>
                            </div>
-                           <span class="orange">MOBILE</span>
+                           <span class="orange">Telefon</span>
                            <span class="mobile-number">+11 (01) 987546</span>
                        </div>
                        <div class="single-information">
                            <div class="icon">
                              <i class="fa fa-address-card"></i>
                            </div>
-                           <span class="orange">EMAIL</span>
+                           <span class="orange">Email</span>
                            <span class="eamil-id">support@yourdomain.com</span>
                        </div>
                        <div class="single-information">
                            <div class="icon">
                              <i class="fa fa-map-marker"></i>
                            </div>
-                           <span class="orange">ADDRESS</span>
+                           <span class="orange">Adres</span>
                            <span  class="current-address">12/D-2, Baker Street Boo, Newhaircut, CA, USA</span>
                        </div>
                    </div>
@@ -60,25 +60,25 @@
                </div>
                <div class="comment-box text-center">
                    <div class="border-heading">
-                       <h4>WRITE YOUR COMMENT</h4>
+                       <h4>Bize Ulaşın</h4>
                    </div>
                    <form (submit)="handleSubmit()">
                        <div class="row">
                            <div class="col-sm-6 name-parent">
                                <div class="single-input-box">
-                                   <input [(ngModel)]="name" name="name" class="form-control" placeholder="YOUR NAME ......." type="text">
+                                   <input [(ngModel)]="name" name="name" class="form-control" placeholder="Ad-Soyad" type="text">
                                </div>
                            </div>
                            <div class="col-sm-6 email-parent">
                                <div class="single-input-box">
-                                   <input [(ngModel)]="email" name="email" class="form-control" placeholder="YOUR EMAIL ......." type="text">
+                                   <input [(ngModel)]="email" name="email" class="form-control" placeholder="Email" type="text">
                                </div>
                            </div>
                        </div>
                        <div class="single-input-box">
-                           <textarea [(ngModel)]="message" name="message" class="form-control" placeholder="YOUR Message ......."></textarea>
+                           <textarea [(ngModel)]="message" name="message" class="form-control" placeholder="Mesajınız"></textarea>
                        </div>
-                       <input value="SEND MESSAGE" class="sune-btn" type="submit">
+                       <button class="sune-btn" type="submit">Gönder</button>
                    </form>
                </div>
            </div>

@@ -1,14 +1,12 @@
 <section class="slider-area">
-
-    <div class="image-slider" (swipeleft)="swiped($event.type)" (swiperight)="swiped($event.type)">
-
-        <div *ngIf="currentSlide === 1" [@changeSlideLeft]="animationState" class="slider-single-item">
+    <div class="slider-carousel" (swipeleft)="swiped($event.type)" (swiperight)="swiped($event.type)">
+        <div class="single-item" *ngIf="currentSlide === 1" [@changeSlideLeft]="animationState">
             <img src="/assets/images/home/1.jpg" alt="First slide">
            <div class="overlay"></div>
             <div class="container-parent">
                 <div class="container">
                     <div class="sune-carousel-caption">
-                       <h1><span class="greating">SMILE 1</span>
+                       <h1><span class="greating">SMILE 1 </span>
                        <span class="everyone">FOR EVERYONE
                        <span class="subheading">SUSTAINABLE FUTURE FOR CHILDREN</span></span></h1>
                         <p>Every year millions of children around the world drop out school beacuse of lack of financial support from their poor family. SUNE is now working with them to bring them in school.</p>
@@ -17,30 +15,13 @@
                 </div>
             </div>
         </div><!--/.single-item -->
-
-        <div *ngIf="currentSlide === 2" [@changeSlideLeft]="animationState" class="slider-single-item">
-            <img  src="/assets/images/home/1.jpg" alt="First slide">
-           <div class="overlay"></div>
-            <div class="container-parent">
-                <div class="container">
-                    <div class="sune-carousel-caption">
-                       <h1><span class="greating">SMILE 2</span>
-                       <span class="everyone">FOR EVERYONE
-                       <span class="subheading">SUSTAINABLE FUTURE FOR CHILDREN</span></span></h1>
-                        <p>Every year millions of children around the world drop out school beacuse of lack of financial support from their poor family. SUNE is now working with them to bring them in school.</p>
-                        <a href="#" class="more-stories">MORE STORIES <i class="ion-android-arrow-forward"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div><!--/.single-item -->
-
-        <div *ngIf="currentSlide === 3" [@changeSlideLeft]="animationState" class="slider-single-item">
+        <div class="single-item" *ngIf="currentSlide === 2" [@changeSlideLeft]="animationState">
             <img src="/assets/images/home/1.jpg" alt="First slide">
            <div class="overlay"></div>
             <div class="container-parent">
                 <div class="container">
                     <div class="sune-carousel-caption">
-                       <h1><span class="greating">SMILE 3</span>
+                       <h1><span class="greating">SMILE 2 </span>
                        <span class="everyone">FOR EVERYONE
                        <span class="subheading">SUSTAINABLE FUTURE FOR CHILDREN</span></span></h1>
                         <p>Every year millions of children around the world drop out school beacuse of lack of financial support from their poor family. SUNE is now working with them to bring them in school.</p>
@@ -49,8 +30,20 @@
                 </div>
             </div>
         </div><!--/.single-item -->
-
+        <div class="single-item" *ngIf="currentSlide === 3" [@changeSlideLeft]="animationState">
+            <img src="/assets/images/home/1.jpg" alt="First slide">
+           <div class="overlay"></div>
+            <div class="container-parent">
+                <div class="container">
+                    <div class="sune-carousel-caption">
+                       <h1><span class="greating">SMILE 3 </span>
+                       <span class="everyone">FOR EVERYONE
+                       <span class="subheading">SUSTAINABLE FUTURE FOR CHILDREN</span></span></h1>
+                        <p>Every year millions of children around the world drop out school beacuse of lack of financial support from their poor family. SUNE is now working with them to bring them in school.</p>
+                        <a href="#" class="more-stories">MORE STORIES <i class="ion-android-arrow-forward"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.single-item -->
     </div>
-
-
 </section>

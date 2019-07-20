@@ -19,6 +19,9 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { AboutpageComponent } from './aboutpage/aboutpage.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { ContactuspageComponent } from './contactuspage/contactuspage.component';
+import { TarihcepageComponent } from './tarihcepage/tarihcepage.component';
+import { GonullulerimizpageComponent } from './gonullulerimizpage/gonullulerimizpage.component';
+import { GonulluolunpageComponent } from './gonulluolunpage/gonulluolunpage.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -37,7 +40,10 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MainpageComponent,
     AboutpageComponent,
     ErrorpageComponent,
-    ContactuspageComponent
+    ContactuspageComponent,
+    TarihcepageComponent,
+    GonullulerimizpageComponent,
+    GonulluolunpageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: "suneAngular"}),

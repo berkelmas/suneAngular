@@ -42,6 +42,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     }
   }
 
+
   constructor(private cdr: ChangeDetectorRef, @Inject(PLATFORM_ID) private platformId: any) {}
 
   ngOnInit() {
@@ -63,5 +64,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   changeMenuState() {
     this.menuOpen = !this.menuOpen;
   }
+
 
 }
