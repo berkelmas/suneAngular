@@ -1,11 +1,11 @@
 import { BrowserModule, Title, Meta } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule }   from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +22,14 @@ import { ContactuspageComponent } from './contactuspage/contactuspage.component'
 import { TarihcepageComponent } from './tarihcepage/tarihcepage.component';
 import { GonullulerimizpageComponent } from './gonullulerimizpage/gonullulerimizpage.component';
 import { GonulluolunpageComponent } from './gonulluolunpage/gonulluolunpage.component';
+import { ProjelerpageComponent } from './projelerpage/projelerpage.component';
+import { DuyurularpageComponent } from './duyurularpage/duyurularpage.component';
+import { AtolyelerpageComponent } from './atolyelerpage/atolyelerpage.component';
+import { BurslarpageComponent } from './burslarpage/burslarpage.component';
+import { ProjedetaypageComponent } from './projedetaypage/projedetaypage.component';
+import { BursdetaypageComponent } from './bursdetaypage/bursdetaypage.component';
+
+import { convertHtmlToText } from './convertHTMLToText.pipe';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -43,14 +51,22 @@ export class MyHammerConfig extends HammerGestureConfig  {
     ContactuspageComponent,
     TarihcepageComponent,
     GonullulerimizpageComponent,
-    GonulluolunpageComponent
+    GonulluolunpageComponent,
+    ProjelerpageComponent,
+    DuyurularpageComponent,
+    AtolyelerpageComponent,
+    BurslarpageComponent,
+    ProjedetaypageComponent,
+    BursdetaypageComponent,
+
+    convertHtmlToText,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: "suneAngular"}),
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    LazyLoadImageModule
+    HttpClientModule,
   ],
   providers: [
     {
