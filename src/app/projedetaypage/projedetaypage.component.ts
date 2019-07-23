@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { ProjelerService } from '../projeler.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-projedetaypage',
@@ -6,10 +10,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projedetaypage.component.less']
 })
 export class ProjedetaypageComponent implements OnInit {
+  proje: any;
+  projeler: any;
 
-  constructor() { }
+  apiMediaEndpoint: string = environment.apiMediaEndpoint;
+
+  constructor(private route: ActivatedRoute, private projelerService: ProjelerService) { }
 
   ngOnInit() {
+    this.route.params.subscribe(res => {
+      this.projelerService.getSingleProje(res['id']).subscribe(res => {
+        this.proje = res;
+      })
+    })
+    this.projelerService.getProjeler(1).subscribe(res => {
+      this.projeler = res['results']
+    })
   }
 
 }

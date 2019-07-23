@@ -14,9 +14,9 @@
                    <div class="meta-box">
                    </div>
                    <div class="blog-list-text">
-                       <h3><a href="#">{{ proje.proje_baslik }}</a></h3>
+                       <h3><a [routerLink]="['/proje', proje.id, proje.proje_slug]">{{ proje.proje_baslik }}</a></h3>
                        <p>{{ proje.proje_icerik |convertHtmlToText | slice:0:600 }}</p>
-                       <a href="#" class="blog-read-more-button">Daha Fazlasını Oku <i class="ion-android-arrow-forward"></i></a>
+                       <a [routerLink]="['/proje', proje.id, proje.proje_slug]" class="blog-read-more-button">Daha Fazlasını Oku <i class="ion-android-arrow-forward"></i></a>
                    </div>
                </div><!--/.blog-list-item-->
 
@@ -59,11 +59,10 @@
                                    <div class="meta-box">
 
                                    </div>
-                                   <h5><a href="#">{{ proje.proje_baslik }}</a></h5>
+                                   <h5><a [routerLink]="['/proje', proje.id, proje.proje_slug]">{{ proje.proje_baslik }}</a></h5>
                                    <p>{{ proje.proje_icerik | convertHtmlToText | slice:0:100 }}...</p>
                                </div><!--/.popular-post -->
                            </div>
-
                        </div>
                    </aside>
 

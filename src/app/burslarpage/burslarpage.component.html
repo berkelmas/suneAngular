@@ -1,3 +1,67 @@
-<p>
-  burslarpage works!
-</p>
+<div class="blog-list-body mt100 pdb90">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+
+                <div *ngFor="let burs of burslar; let iBurs = index;" class="blog-list-item">
+                    <div class="image">
+                        <img [src]="apiMediaEndpoint + burs.burs_resim" class="img-responsive" alt="blog image">
+                    </div>
+                    <div class="meta-box">
+                    </div>
+                    <div class="blog-list-text">
+                        <h3><a [routerLink]="['/burs', burs.id, burs.burs_slug]">{{ burs.burs_baslik }}</a></h3>
+                        <p>{{ burs.burs_icerik | convertHtmlToText | slice:0:600 }}...</p>
+                        <a [routerLink]="['/burs', burs.id, burs.burs_slug]" class="blog-read-more-button">Daha Fazla Oku <i class="ion-android-arrow-forward"></i></a>
+                    </div>
+                </div><!--/.blog-list-item-->
+
+                <ul class="sune-pagination">
+
+                  <li *ngIf="(currentPage - 1) !== 0">
+                    <a [routerLink]="['/burslar', (currentPage-1)]">
+                      <i class="fa fa-long-arrow-left"></i>
+                      ÖNCEKİ
+                    </a>
+                  </li>
+
+                  <li *ngFor="let page of totalPageArray; let iPage = index;">
+                    <a [routerLink]="['/burslar', (iPage + 1)]" routerLinkActive="active">{{ iPage + 1 }}</a>
+                  </li>
+
+                  <li *ngIf="currentPage != totalPageNumber">
+                    <a [routerLink]="['/burslar', (currentPage+1)]">SONRAKİ
+                      <i class="fa fa-long-arrow-right"></i>
+                    </a>
+                  </li>
+
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <aside class="blog-page-popular-post">
+                        <div class="border-heading">
+                            <h4>Son Burslar</h4>
+                        </div>
+                        <div class="row">
+
+                            <div *ngFor="let burs of burslar; let bIndex = index;" class="col-md-12">
+                                <div class="popular-post">
+                                    <div class="image">
+                                        <img [src]="apiMediaEndpoint + burs.burs_resim" class="img-responsive" alt="causes">
+                                    </div>
+                                    <div class="meta-box">
+                                    </div>
+                                    <h5><a [routerLink]="['/burs', burs.id, burs.burs_slug]">{{ burs.burs_baslik }}</a></h5>
+                                    <p>{{ burs.burs_icerik | convertHtmlToText | slice:0:100 }}...</p>
+                                </div><!--/.popular-post -->
+                            </div>
+
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

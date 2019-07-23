@@ -10,6 +10,10 @@ export class ProjelerService {
   constructor(private http: HttpClient) {}
 
   getProjeler(page: number) {
-    return this.http.get(`${environment.apiEndpoint}projeler?page=${page}`)
+    return this.http.get(`${environment.apiEndpoint}projeler?page=${page}`);
+  }
+
+  getSingleProje(id: string) {
+    return this.http.get(`${environment.apiEndpoint}singleproje/${id}`);
   }
 }

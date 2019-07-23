@@ -12,8 +12,10 @@ import { DuyurularpageComponent } from './duyurularpage/duyurularpage.component'
 
 import { BurslarpageComponent } from './burslarpage/burslarpage.component';
 import { BursdetaypageComponent } from './bursdetaypage/bursdetaypage.component';
+import { BursbasvurupageComponent } from './bursbasvurupage/bursbasvurupage.component';
 
 import { AtolyelerpageComponent } from './atolyelerpage/atolyelerpage.component';
+import { AtolyebasvurupageComponent } from './atolyebasvurupage/atolyebasvurupage.component';
 
 import { GonullulerimizpageComponent } from './gonullulerimizpage/gonullulerimizpage.component';
 import { GonulluolunpageComponent } from './gonulluolunpage/gonulluolunpage.component';
@@ -28,12 +30,14 @@ const routes: Routes = [
   {path: 'projeler/:page', component: ProjelerpageComponent},
   {path: 'proje/:id/:projeslug', component: ProjedetaypageComponent},
 
-  {path: 'duyurular', component: DuyurularpageComponent},
+  {path: 'duyurular/:page', component: DuyurularpageComponent},
 
-  {path: 'burslar', component: BurslarpageComponent},
+  {path: 'burslar/:page', component: BurslarpageComponent},
   {path: 'burs/:id/:bursslug', component: BursdetaypageComponent},
+  {path: 'burs-basvuru', component: BursbasvurupageComponent},
 
-  {path: 'atolyeler', component: AtolyelerpageComponent},
+  {path: 'atolyeler/:page', component: AtolyelerpageComponent},
+  {path: 'atolye-basvuru', component: AtolyebasvurupageComponent},
 
   {path: 'gonullulerimiz', component: GonullulerimizpageComponent},
   {path: 'gonullu-olun', component: GonulluolunpageComponent},

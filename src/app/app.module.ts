@@ -30,6 +30,8 @@ import { ProjedetaypageComponent } from './projedetaypage/projedetaypage.compone
 import { BursdetaypageComponent } from './bursdetaypage/bursdetaypage.component';
 
 import { convertHtmlToText } from './convertHTMLToText.pipe';
+import { BursbasvurupageComponent } from './bursbasvurupage/bursbasvurupage.component';
+import { AtolyebasvurupageComponent } from './atolyebasvurupage/atolyebasvurupage.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -60,6 +62,10 @@ export class MyHammerConfig extends HammerGestureConfig  {
     BursdetaypageComponent,
 
     convertHtmlToText,
+
+    BursbasvurupageComponent,
+
+    AtolyebasvurupageComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: "suneAngular"}),

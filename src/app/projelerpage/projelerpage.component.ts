@@ -25,12 +25,11 @@ export class ProjelerpageComponent implements OnInit {
         .subscribe(res => {
           this.projeler = res['results'];
           this.totalPageArray = Array(res['totalpages']).fill(0);
-          this.totalPageNumber = res['count'];
+          this.totalPageNumber = res['totalpages'];
 
           console.log(res);
         })
     })
-
   }
 
 }

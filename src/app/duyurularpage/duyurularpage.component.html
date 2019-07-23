@@ -1,3 +1,40 @@
-<p>
-  duyurularpage works!
-</p>
+<div class="blog-list-body mt100 pdb90">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+
+                <div *ngFor="let duyuru of duyurular; let iDuyuru = index;" class="blog-list-item">
+
+                    <div class="meta-box">
+                    </div>
+                    <div class="blog-list-text">
+                        <h3><a>{{ duyuru.duyuru_baslik }}</a></h3>
+                        <p>{{ duyuru.duyuru_mesaj }}...</p>
+                    </div>
+                </div><!--/.blog-list-item-->
+
+                <ul class="sune-pagination">
+
+                  <li *ngIf="(currentPage - 1) !== 0">
+                    <a [routerLink]="['/duyurular', (currentPage-1)]">
+                      <i class="fa fa-long-arrow-left"></i>
+                      ÖNCEKİ
+                    </a>
+                  </li>
+
+                  <li *ngFor="let page of totalPageArray; let iPage = index;">
+                    <a [routerLink]="['/duyurular', (iPage + 1)]" routerLinkActive="active">{{ iPage + 1 }}</a>
+                  </li>
+
+                  <li *ngIf="currentPage != totalPageNumber">
+                    <a [routerLink]="['/duyurular', (currentPage+1)]">SONRAKİ
+                      <i class="fa fa-long-arrow-right"></i>
+                    </a>
+                  </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
