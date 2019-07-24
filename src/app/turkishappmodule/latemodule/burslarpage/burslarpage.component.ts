@@ -1,29 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {ProjelerService} from '../projeler.service';
-import { environment } from '../../environments/environment';
+
+import {BurslarService} from '../../../burslar.service';
+import { environment } from '../../../../environments/environment';
 
 @Component({
-  selector: 'app-projelerpage',
-  templateUrl: './projelerpage.component.html',
-  styleUrls: ['./projelerpage.component.less']
+  selector: 'app-burslarpage',
+  templateUrl: './burslarpage.component.html',
+  styleUrls: ['./burslarpage.component.less']
 })
-export class ProjelerpageComponent implements OnInit {
-  projeler: any;
+export class BurslarpageComponent implements OnInit {
+  burslar: any;
   totalPageArray: any;
   currentPage: number;
   totalPageNumber: number;
 
   apiMediaEndpoint: string = environment.apiMediaEndpoint;
 
-  constructor(private projelerService: ProjelerService, private route: ActivatedRoute) { }
+  constructor(private burslarService: BurslarService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(res => {
       this.currentPage = parseInt(res.page);
-      this.projelerService.getProjeler(res.page)
+      this.burslarService.getBurslar(res.page)
         .subscribe(res => {
-          this.projeler = res['results'];
+          this.burslar = res['results'];
           this.totalPageArray = Array(res['totalpages']).fill(0);
           this.totalPageNumber = res['totalpages'];
 

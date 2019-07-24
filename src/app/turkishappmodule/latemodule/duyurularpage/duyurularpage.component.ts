@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { DuyurularService } from '../duyurular.service';
+import { DuyurularService } from '../../../duyurular.service';
 
 @Component({
   selector: 'app-duyurularpage',

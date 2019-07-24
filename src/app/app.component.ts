@@ -6,7 +6,6 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements AfterViewInit {
-  title = 'suneAngular';
 
   ngAfterViewInit (): void {
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { AtolyelerService } from '../atolyeler.service';
+import { AtolyelerService } from '../../../atolyeler.service';
 
 @Component({
   selector: 'app-atolyelerpage',

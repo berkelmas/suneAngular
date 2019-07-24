@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AtolyelerService } from '../atolyeler.service';
+import { AtolyelerService } from '../../../atolyeler.service';
 
 @Component({
   selector: 'app-atolyebasvurupage',

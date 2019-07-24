@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { ProjelerService } from '../projeler.service';
-import { environment } from '../../environments/environment';
+import { ProjelerService } from '../../../projeler.service';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-projedetaypage',

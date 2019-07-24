@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BurslarService } from '../burslar.service';
+import { BurslarService } from '../../../burslar.service';
 
 @Component({
   selector: 'app-bursbasvurupage',

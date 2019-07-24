@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import {BurslarService} from '../burslar.service';
-import { environment } from '../../environments/environment';
+import {BurslarService} from '../../../burslar.service';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-bursdetaypage',

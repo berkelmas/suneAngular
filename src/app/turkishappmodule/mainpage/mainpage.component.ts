@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
-import { ProjelerService } from '../projeler.service';
-import { DuyurularService } from '../duyurular.service';
+import { ProjelerService } from '../../projeler.service';
+import { DuyurularService } from '../../duyurular.service';
 
 @Component({
   selector: 'app-mainpage',
