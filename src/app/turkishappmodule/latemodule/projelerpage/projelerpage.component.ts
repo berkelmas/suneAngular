@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import {ProjelerService} from '../../../projeler.service';
-import { environment } from '../../../../environments/environment';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { ProjelerService } from "../../../projeler.service";
+import { environment } from "../../../../environments/environment";
 
 @Component({
-  selector: 'app-projelerpage',
-  templateUrl: './projelerpage.component.html',
-  styleUrls: ['./projelerpage.component.less']
+  selector: "app-projelerpage",
+  templateUrl: "./projelerpage.component.html",
+  styleUrls: ["./projelerpage.component.less"]
 })
 export class ProjelerpageComponent implements OnInit {
   projeler: any;
@@ -16,20 +16,21 @@ export class ProjelerpageComponent implements OnInit {
 
   apiMediaEndpoint: string = environment.apiMediaEndpoint;
 
-  constructor(private projelerService: ProjelerService, private route: ActivatedRoute) { }
+  constructor(
+    private projelerService: ProjelerService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.route.params.subscribe(res => {
-      this.currentPage = parseInt(res.page);
-      this.projelerService.getProjeler(res.page)
-        .subscribe(res => {
-          this.projeler = res['results'];
-          this.totalPageArray = Array(res['totalpages']).fill(0);
-          this.totalPageNumber = res['totalpages'];
+      this.currentPage = parseInt(res.page, 10);
+      this.projelerService.getProjeler(res.page, 3).subscribe(proje => {
+        this.projeler = proje.result;
+        this.totalPageArray = Array(proje.resultCount).fill(0);
+        this.totalPageNumber = proje.resultCount;
 
-          console.log(res);
-        })
-    })
+        console.log(proje);
+      });
+    });
   }
-
 }

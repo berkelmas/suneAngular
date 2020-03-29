@@ -1,75 +1,113 @@
 <div class="container">
   <div class="row">
-    <br><br>
+    <br /><br />
     <div class="col-md-12">
-      <h3>Başak Kültür ve Sanat Vakfı, Sivil Toplum İçin Destek Vakfı-
-      STDV desteğiyle çocuk hakları alanında düzenlediği  atölyeler
-      için gönüllülerini arıyor.</h3>
-      <p>Çocuk haklarını esas sahipleriyle deneyimleyerek  beraber öğrenmek,
-      çocukların kendi haklarına kendilerinin sahip çıkmalarına katkıda
-      bulunmak, bunu yaparken de onların sanatsal, sosyal, bilişsel ve bilimsel
-      yönlerini geliştirmelerine zemin hazırlamak amacıyla çocuk hakları
-      atölyeleri düzenlemeketeyiz.</p>
-      <p>Pazar günleri 14.00 – 16.00 saatleri arasında düzenlenecek olan ücretsiz
-      çocuk hakları atölyelerini desteklemek isteyen gönüllüler   adresinden
-      bizimle iletişime geçebilir.</p>
-      <p>Gönüllerden <strong>gönüllü oryantasyonuna</strong> ve <strong>çocuk hakları eğitimci
-      eğitimlerine</strong> katılmaları beklenmektedir. Katılımcılar çalışmanın
-      sonucunda sertifika almaya hak kazanacaklardır.</p>
+      <h3>
+        Başak Kültür ve Sanat Vakfı, Sivil Toplum İçin Destek Vakfı- STDV
+        desteğiyle çocuk hakları alanında düzenlediği  atölyeler
+        için gönüllülerini arıyor.
+      </h3>
+      <p>
+        Çocuk haklarını esas sahipleriyle deneyimleyerek  beraber öğrenmek,
+        çocukların kendi haklarına kendilerinin sahip çıkmalarına katkıda
+        bulunmak, bunu yaparken de onların sanatsal, sosyal, bilişsel ve
+        bilimsel yönlerini geliştirmelerine zemin hazırlamak amacıyla çocuk
+        hakları atölyeleri düzenlemeketeyiz.
+      </p>
+      <p>
+        Pazar günleri 14.00 – 16.00 saatleri arasında düzenlenecek olan ücretsiz
+        çocuk hakları atölyelerini desteklemek isteyen gönüllüler   adresinden
+        bizimle iletişime geçebilir.
+      </p>
+      <p>
+        Gönüllerden <strong>gönüllü oryantasyonuna</strong> ve
+        <strong>çocuk hakları eğitimci eğitimlerine</strong> katılmaları
+        beklenmektedir. Katılımcılar çalışmanın sonucunda sertifika almaya hak
+        kazanacaklardır.
+      </p>
     </div>
-
 
     <div class="col-md-12">
       <div class="comment-box text-center">
-          <div class="border-heading">
-              <h4>Gönüllülük Formu</h4>
-          </div>
-          <form action="#">
-              <div class="row">
-                  <div class="col-sm-6 name-parent">
-                      <div class="single-input-box">
-                          <input class="form-control" placeholder="Ad-Soyad" type="text">
-                      </div>
-                  </div>
-                  <div class="col-sm-6 email-parent">
-                      <div class="single-input-box">
-                          <input class="form-control" placeholder="E-Posta" type="text">
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-6 name-parent">
-                      <div class="single-input-box">
-                          <input class="form-control" placeholder="Telefon" type="text">
-                      </div>
-                  </div>
-                  <div class="col-sm-6 email-parent">
-                      <div class="single-input-box">
-                          <input class="form-control" list="calisma" placeholder="Çalışmak İstediğiniz Alan" type="text">
-                          <datalist id="calisma">
-                            <option value="Saha Görevlisi">
-                            <option value="Eğitmen">
-                            <option value="Tasarımcı">
-                            <option value="Teknik Gönüllü">
-                          </datalist>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-12">
-                      <div class="single-input-box">
-                          <label for="baslama">Başlama Tarihi</label>
-                          <input class="form-control" id="baslama" placeholder="Başlama Tarihi" type="date">
-                      </div>
-                  </div>
-              </div>
+        <div class="border-heading">
+          <h4>Gönüllülük Formu</h4>
+        </div>
+        <form [formGroup]="volunteerForm">
+          <div class="row">
+            <div class="col-sm-6 name-parent">
               <div class="single-input-box">
-                  <textarea class="form-control" placeholder="Mesajınız"></textarea>
+                <input
+                  class="form-control"
+                  placeholder="Ad-Soyad"
+                  formControlName="fullName"
+                  type="text"
+                />
               </div>
-              <button class="sune-btn" type="submit">Gönüllü Olun</button>
-          </form>
+            </div>
+            <div class="col-sm-6 email-parent">
+              <div class="single-input-box">
+                <input
+                  class="form-control"
+                  placeholder="E-Posta"
+                  formControlName="email"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 name-parent">
+              <div class="single-input-box">
+                <input
+                  class="form-control"
+                  placeholder="Telefon"
+                  formControlName="phone"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6 email-parent">
+              <div class="single-input-box">
+                <input
+                  class="form-control"
+                  list="calisma"
+                  placeholder="Çalışmak İstediğiniz Alan"
+                  formControlName="workPlace"
+                  type="text"
+                />
+                <datalist id="calisma">
+                  <option value="Saha Görevlisi"> </option>
+                  <option value="Eğitmen"> </option>
+                  <option value="Tasarımcı"> </option>
+                  <option value="Teknik Gönüllü"> </option>
+                </datalist>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="single-input-box">
+                <label for="baslama">Başlama Tarihi</label>
+                <input
+                  class="form-control"
+                  id="baslama"
+                  placeholder="Başlama Tarihi"
+                  formControlName="startDate"
+                  type="date"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="single-input-box">
+            <textarea
+              class="form-control"
+              formControlName="description"
+              placeholder="Mesajınız"
+            ></textarea>
+          </div>
+          <button class="sune-btn" type="submit">Gönüllü Olun</button>
+        </form>
       </div>
-
     </div>
   </div>
 </div>

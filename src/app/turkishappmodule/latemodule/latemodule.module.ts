@@ -1,39 +1,40 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LatemoduleRouting } from './latemodule-routing.module';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { LatemoduleRouting } from "./latemodule-routing.module";
 
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { AboutpageComponent } from './aboutpage/aboutpage.component';
-import { TarihcepageComponent } from './tarihcepage/tarihcepage.component';
+import { AboutpageComponent } from "./aboutpage/aboutpage.component";
+import { TarihcepageComponent } from "./tarihcepage/tarihcepage.component";
 
-import { ProjelerpageComponent } from './projelerpage/projelerpage.component';
-import { ProjedetaypageComponent } from './projedetaypage/projedetaypage.component';
+import { ProjelerpageComponent } from "./projelerpage/projelerpage.component";
+import { ProjedetaypageComponent } from "./projedetaypage/projedetaypage.component";
 
-import { DuyurularpageComponent } from './duyurularpage/duyurularpage.component';
+import { DuyurularpageComponent } from "./duyurularpage/duyurularpage.component";
 
-import { BurslarpageComponent } from './burslarpage/burslarpage.component';
-import { BursdetaypageComponent } from './bursdetaypage/bursdetaypage.component';
-import { BursbasvurupageComponent } from './bursbasvurupage/bursbasvurupage.component';
+import { BurslarpageComponent } from "./burslarpage/burslarpage.component";
+import { BursdetaypageComponent } from "./bursdetaypage/bursdetaypage.component";
+import { BursbasvurupageComponent } from "./bursbasvurupage/bursbasvurupage.component";
 
-import { AtolyelerpageComponent } from './atolyelerpage/atolyelerpage.component';
-import { AtolyebasvurupageComponent } from './atolyebasvurupage/atolyebasvurupage.component';
+import { AtolyelerpageComponent } from "./atolyelerpage/atolyelerpage.component";
+import { AtolyebasvurupageComponent } from "./atolyebasvurupage/atolyebasvurupage.component";
 
-import { GonullulerimizpageComponent } from './gonullulerimizpage/gonullulerimizpage.component';
-import { GonulluolunpageComponent } from './gonulluolunpage/gonulluolunpage.component';
-import { ContactuspageComponent } from './contactuspage/contactuspage.component';
+import { GonullulerimizpageComponent } from "./gonullulerimizpage/gonullulerimizpage.component";
+import { GonulluolunpageComponent } from "./gonulluolunpage/gonulluolunpage.component";
+import { ContactuspageComponent } from "./contactuspage/contactuspage.component";
 
-import { RecentcausesComponent } from './recentcauses/recentcauses.component';
+import { RecentcausesComponent } from "./recentcauses/recentcauses.component";
 
-import { convertHtmlToText } from './convertHTMLToText.pipe';
+import { convertHtmlToText } from "./convertHTMLToText.pipe";
 
 @NgModule({
   imports: [
     CommonModule,
     LatemoduleRouting,
     FormsModule,
-    HttpClientModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   declarations: [
     AboutpageComponent,
@@ -51,7 +52,7 @@ import { convertHtmlToText } from './convertHTMLToText.pipe';
     ContactuspageComponent,
     RecentcausesComponent,
 
-    convertHtmlToText,
-  ],
+    convertHtmlToText
+  ]
 })
-export class LateModule { }
+export class LateModule {}
