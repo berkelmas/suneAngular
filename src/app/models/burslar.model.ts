@@ -9,3 +9,7 @@ export interface IBurs {
 export interface IGetAllBurslar extends IGeneralResponse {
   result: IBurs[];
 }
+
+export interface IGetSingleBursResponse extends IGeneralResponse {
+  result: IBurs;
+}

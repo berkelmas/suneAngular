@@ -1,57 +1,70 @@
-<div class="blog-detail-body mt100 pdb90">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="blog-list-item">
-                    <div class="image">
-                        <img *ngIf="burs" [src]="apiMediaEndpoint + burs.burs_resim" class="img-responsive" alt="blog image">
-                    </div>
-                    <div class="meta-box">
-                    </div>
-                    <div class="blog-list-text">
-                      <div *ngIf="burs" [innerHTML]="burs.burs_icerik"></div>
-                    </div>
-                </div><!--/.blog-list-item-->
-                <div class="share-social-media">
-                    <span>Sosyal Medyada Biz:</span>
-                    <ul class="colorfull-social-icon ">
-                         <li><a href="#" class="facebook-icon"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#" class="twitter-icon"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#" class="google-icon"><i class="fa fa-google"></i></a></li>
-                         <li><a href="#" class="linked-icon"><i class="fa fa-linkedin"></i></a></li>
-                     </ul>
-                </div>
-                <div class="next-prev-post mt50">
-
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="sidebar">
-
-                    <aside class="blog-page-popular-post">
-                        <div class="border-heading">
-                            <h4>Son Burslar</h4>
-                        </div>
-                        <div class="row">
-
-                            <div *ngFor="let burs of burslar; let pIndex = index;" class="col-md-12">
-                                <div class="popular-post">
-                                    <div class="image">
-                                        <img [src]="apiMediaEndpoint + burs.burs_resim" class="img-responsive" alt="causes">
-                                    </div>
-                                    <div class="meta-box">
-
-                                    </div>
-                                    <h5><a [routerLink]="['/burs', burs.id, burs.burs_slug]">{{ burs.burs_baslik }}</a></h5>
-                                    <p>{{ burs.burs_icerik | convertHtmlToText | slice:0:100 }}...</p>
-                                </div><!--/.popular-post -->
-                            </div>
-
-                        </div>
-                    </aside>
-
-                </div>
-            </div>
+<div *ngIf="burs" class="blog-detail-body mt100 pdb90">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="blog-list-item">
+          <div class="meta-box"></div>
+          <h3>{{ burs.title }}</h3>
+          <div class="blog-list-text">
+            <div *ngIf="burs" [innerHTML]="burs.description"></div>
+          </div>
         </div>
+        <!--/.blog-list-item-->
+        <div class="share-social-media">
+          <span>Sosyal Medyada Biz:</span>
+          <ul class="colorfull-social-icon ">
+            <li>
+              <a href="#" class="facebook-icon"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="twitter-icon"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#" class="google-icon"><i class="fa fa-google"></i></a>
+            </li>
+            <li>
+              <a href="#" class="linked-icon"><i class="fa fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="next-prev-post mt50"></div>
+      </div>
+      <div class="col-md-3">
+        <div class="sidebar">
+          <aside class="blog-page-popular-post">
+            <div class="border-heading">
+              <h4>Son Burslar</h4>
+            </div>
+            <div class="row">
+              <div
+                *ngFor="let burs of burslar; let pIndex = index"
+                class="col-md-12"
+              >
+                <div class="popular-post">
+                  <div class="image">
+                    <img
+                      [src]="'/assets/images/basak-sanat-vakfi-logo.png'"
+                      class="img-responsive"
+                      alt="causes"
+                    />
+                  </div>
+                  <div class="meta-box"></div>
+                  <h5>
+                    <a
+                      style="color: #484848;"
+                      [routerLink]="['/burs', burs.id, burs.burs_slug]"
+                      >{{ burs.title }}</a
+                    >
+                  </h5>
+                </div>
+                <!--/.popular-post -->
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

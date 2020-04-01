@@ -23,10 +23,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "css/font-awesome.min.css",
               "css/ionicons.min.css",
@@ -40,12 +37,11 @@
               "css/menuzord-animations.css",
               "css/owl.carousel.min.css",
               "css/owl.theme.min.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.less"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "less"
-              ]
+              "includePaths": ["less"]
             },
             "scripts": []
           },
@@ -83,9 +79,7 @@
             "main": "src/main.server.ts",
             "tsConfig": "./src/tsconfig.server.json",
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "less"
-              ]
+              "includePaths": ["less"]
             }
           }
         },
@@ -113,10 +107,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "css/font-awesome.min.cssdsad",
               "css/ionicons.min.css",
@@ -144,9 +135,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -162,6 +151,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "suneAngular"
 }

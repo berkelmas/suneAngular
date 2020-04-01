@@ -32,14 +32,14 @@
         <div class="border-heading">
           <h4>Gönüllülük Formu</h4>
         </div>
-        <form [formGroup]="volunteerForm">
+        <form (submit)="handleSubmit()" [formGroup]="volunteerForm">
           <div class="row">
             <div class="col-sm-6 name-parent">
               <div class="single-input-box">
                 <input
                   class="form-control"
                   placeholder="Ad-Soyad"
-                  formControlName="fullName"
+                  formControlName="name"
                   type="text"
                 />
               </div>
@@ -72,7 +72,7 @@
                   class="form-control"
                   list="calisma"
                   placeholder="Çalışmak İstediğiniz Alan"
-                  formControlName="workPlace"
+                  formControlName="area"
                   type="text"
                 />
                 <datalist id="calisma">
@@ -101,7 +101,7 @@
           <div class="single-input-box">
             <textarea
               class="form-control"
-              formControlName="description"
+              formControlName="message"
               placeholder="Mesajınız"
             ></textarea>
           </div>

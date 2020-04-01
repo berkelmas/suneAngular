@@ -14,7 +14,7 @@
           <div class="meta-box"></div>
           <div class="blog-list-text">
             <div>
-              <h3>{{ proje.title }}</h3>
+              <h3>{{ proje && proje.title }}</h3>
             </div>
             <div *ngIf="proje" [innerHTML]="proje.content"></div>
           </div>
@@ -62,7 +62,7 @@
                   </div>
                   <div class="meta-box"></div>
                   <h5>
-                    <a [routerLink]="['/proje', proje.id, proje.proje_slug]">{{
+                    <a [routerLink]="['/proje', proje.id, 'undefined']">{{
                       proje.title
                     }}</a>
                   </h5>

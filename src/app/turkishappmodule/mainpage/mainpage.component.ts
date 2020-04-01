@@ -28,12 +28,10 @@ export class MainpageComponent implements OnInit {
       content: "Burası Başak Sanat Vakfının Ana Sayfasıdır."
     });
 
-    // this.duyurularService
-    //   .getDuyurular(1)
-    //   .subscribe(res => (this.duyurular = res["results"]));
+    this.duyurularService
+      .getDuyurular(1, 10)
+      .subscribe(res => (this.duyurular = res.result));
     this.projelerService.getProjeler(1, 10).subscribe(res => {
-      console.log("DasSADDSA");
-      console.log(res.result);
       this.projeler = res.result;
     });
   }

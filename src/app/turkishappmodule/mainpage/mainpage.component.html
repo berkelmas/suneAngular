@@ -13,7 +13,9 @@
           <div class="upcomming-event-item">
             <div class="event-text text-center">
               <h3>
-                <a href="#">{{ proje.title }}</a>
+                <a [routerLink]="['/proje', proje.id, 'undefined']">{{
+                  proje.title
+                }}</a>
               </h3>
               <p>{{ proje.summary | slice: 0:80 }}...</p>
               <div class="event-counter">
@@ -45,10 +47,10 @@
             <div class="image"></div>
             <div class="news-text">
               <h3>
-                <a>{{ duyuru.duyuru_baslik }}</a>
+                <a>{{ duyuru.title }}</a>
               </h3>
 
-              <p>{{ duyuru.duyuru_mesaj }}</p>
+              <p>{{ duyuru.description }}</p>
             </div>
             <a class="read-more-icon"><span>+</span></a>
           </div>
