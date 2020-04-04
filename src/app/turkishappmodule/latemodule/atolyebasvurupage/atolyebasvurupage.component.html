@@ -6,11 +6,12 @@
         <div class="border-heading">
           <h4>Atölye Başvuru Formu</h4>
         </div>
-        <form>
+        <form [formGroup]="itemForm">
           <div class="row">
             <div class="col-sm-6 name-parent">
               <div class="single-input-box">
                 <input
+                  formControlName="name"
                   class="form-control"
                   placeholder="Ad-Soyad"
                   type="text"
@@ -19,19 +20,30 @@
             </div>
             <div class="col-sm-6 email-parent">
               <div class="single-input-box">
-                <input class="form-control" placeholder="E-Posta" type="text" />
+                <input
+                  formControlName="email"
+                  class="form-control"
+                  placeholder="E-Posta"
+                  type="text"
+                />
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-6 name-parent">
               <div class="single-input-box">
-                <input class="form-control" placeholder="Telefon" type="text" />
+                <input
+                  formControlName="phone"
+                  class="form-control"
+                  placeholder="Telefon"
+                  type="text"
+                />
               </div>
             </div>
             <div class="col-sm-6 email-parent">
               <div class="single-input-box">
                 <input
+                  formControlName="workplace"
                   class="form-control"
                   list="calisma"
                   placeholder="Başvurmak İstediğiniz Atölye"
@@ -48,9 +60,15 @@
             </div>
           </div>
           <div class="single-input-box">
-            <textarea class="form-control" placeholder="Mesajınız"></textarea>
+            <textarea
+              formControlName="message"
+              class="form-control"
+              placeholder="Mesajınız"
+            ></textarea>
           </div>
-          <button class="sune-btn" type="submit">Başvur</button>
+          <button (click)="handleSubmit()" class="sune-btn" type="button">
+            Başvur
+          </button>
         </form>
       </div>
     </div>

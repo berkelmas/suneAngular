@@ -1,46 +1,76 @@
 <div class="container">
   <div class="row">
-    <br><br>
+    <br /><br />
     <div class="col-md-12">
       <div class="comment-box text-center">
-          <div class="border-heading">
-              <h4>Burs Başvuru Formu</h4>
-          </div>
-          <form >
-              <div class="row">
-                  <div class="col-sm-6 name-parent">
-                      <div class="single-input-box">
-                          <input class="form-control" placeholder="Ad-Soyad" type="text">
-                      </div>
-                  </div>
-                  <div class="col-sm-6 email-parent">
-                      <div class="single-input-box">
-                          <input class="form-control" placeholder="E-Posta" type="text">
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-6 name-parent">
-                      <div class="single-input-box">
-                          <input class="form-control" placeholder="Telefon" type="text">
-                      </div>
-                  </div>
-                  <div class="col-sm-6 email-parent">
-                      <div class="single-input-box">
-                          <input class="form-control" list="calisma" placeholder="Başvurmak İstediğiniz Burs" type="text">
-                          <datalist id="calisma">
-                            <option *ngFor="let burs of aktifburslar" value="{{ burs.burs_baslik }}">
-                          </datalist>
-                      </div>
-                  </div>
-              </div>
+        <div class="border-heading">
+          <h4>Burs Başvuru Formu</h4>
+        </div>
+        <form [formGroup]="itemForm">
+          <div class="row">
+            <div class="col-sm-6 name-parent">
               <div class="single-input-box">
-                  <textarea class="form-control" placeholder="Mesajınız"></textarea>
+                <input
+                  formControlName="name"
+                  class="form-control"
+                  placeholder="Ad-Soyad"
+                  type="text"
+                />
               </div>
-              <button class="sune-btn" type="submit">Başvur</button>
-          </form>
+            </div>
+            <div class="col-sm-6 email-parent">
+              <div class="single-input-box">
+                <input
+                  formControlName="email"
+                  class="form-control"
+                  placeholder="E-Posta"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 name-parent">
+              <div class="single-input-box">
+                <input
+                  formControlName="phone"
+                  class="form-control"
+                  placeholder="Telefon"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6 email-parent">
+              <div class="single-input-box">
+                <input
+                  formControlName="scholarship"
+                  class="form-control"
+                  list="calisma"
+                  placeholder="Başvurmak İstediğiniz Burs"
+                  type="text"
+                />
+                <datalist id="calisma">
+                  <option
+                    *ngFor="let burs of aktifburslar"
+                    value="{{ burs.title }}"
+                  >
+                  </option>
+                </datalist>
+              </div>
+            </div>
+          </div>
+          <div class="single-input-box">
+            <textarea
+              formControlName="message"
+              class="form-control"
+              placeholder="Mesajınız"
+            ></textarea>
+          </div>
+          <button (click)="handleSubmit()" class="sune-btn" type="button">
+            Başvur
+          </button>
+        </form>
       </div>
-
     </div>
   </div>
 </div>
