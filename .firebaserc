@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "basaksanatsite"
+  },
+  "targets": {
+    "basaksanatsite": {
+      "hosting": {
+        "basaksanatsite": [
+          "basaksanatsite"
+        ]
+      }
+    }
+  }
+}
